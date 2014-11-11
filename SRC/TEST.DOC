@@ -1,0 +1,10 @@
+This archive contains KEd v2.10, the current release candidate.
+The major new feature is support for movable and sizable windows.
+Internally, though, there is a completely new Keyboard input 
+system, object-oriented windows, and a new file loading system.
+These new internal systems will allow me to expand the functionality
+quickly and bring up user defined macros and many other capabilities.
+Not implemented at this time are any Wordstar commands and the
+often-requested "Microsoft" block commands.
+
+

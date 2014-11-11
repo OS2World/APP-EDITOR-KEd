@@ -1,0 +1,80 @@
+      October 24, 1994
+
+      This is the third beta of KEd 2.10 (released ver 2.15)
+      Fixed bugs:
+             keyboard driver (grrrrr)
+             "block read" with large files (still a little slow)
+             EOF option now reads correctly from the settings file.
+             shell command 
+             tab support (see on-line help)
+      
+      For support during testing, I have included 2 versions of the EXE,
+      ked.exe and ked_dbg.exe. The dbg version will write out a large
+      logfile that tracks each keystroke. If you experience kbd problems
+      with the non-debug version, load the dbg version, try to replicate 
+      the problem, and email me the logfile.
+
+      Thanks again for your time. 
+      Don Radick  Kudzu Software
+
+
+======================================================================
+      September 25, 1994
+
+  This is the 2nd beta version of KEd 2.10.
+  Fixed bugs:
+             keyboard driver (i hope)
+             file load dialog
+
+  Not fixed bugs:
+             large (>100k) files loaded with "read block" still crash
+
+
+  Thanks again for your efforts, and I look forward to your findings.
+  regards,
+  Don Radick
+
+
+=========================================================================
+
+       September 13, 1994
+
+  Hi folks!
+
+  This archive contains KEd v2.10, the current release candidate.
+  The major new feature is support for movable and sizable windows.
+  Internally, though, there is a completely new Keyboard input 
+  system, object-oriented windows, and a new file loading system.
+  An OS/2 TRAP handler has been implemented, and should allow me
+  to find fatal errors faster.
+  These new internal systems will allow me to expand the functionality
+  quickly and bring up user defined macros and many other capabilities.
+
+  Not implemented at this time are any Wordstar commands and the
+  often-requested "Microsoft" block commands.
+  It's not clear at this time that those features will be implemented in 
+  the final 2.10 release.
+
+
+  You can enter Size_Window mode with Ctrl-W and Move_Window mode
+  with Alt-W. In each case you exit the mode via Esc.
+
+
+  Some questions:
+
+  Should I provide a "status box" to remind users when they are in this
+  mode?
+
+  Should I provide a "Tile Window" capability, either Vertical or Horizontal?
+
+
+  As usual, this is BETA, and don't use it on irreplacable files.
+
+  I need to know of any anomalies, missing features, or Traps.
+  Please do not distribute this version to anyone else without my
+  express consent.
+
+  Have fun, and THANKS!
+
+  Don Radick
+

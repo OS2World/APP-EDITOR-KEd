@@ -1,0 +1,18 @@
+;---------------------------------------------------
+;
+;   KED.DEF module definition file
+;
+;
+;
+;---------------------------------------------------
+
+NAME           KED              WINDOWCOMPAT
+
+DESCRIPTION    'Kudzu Editor KEd OS/2 version 2.10 '
+EXETYPE        OS2
+HEAPSIZE       8192
+;STACKSIZE      16384
+STACKSIZE      8192
+
+;SEGMENTS
+;IOPLCODE IOPL

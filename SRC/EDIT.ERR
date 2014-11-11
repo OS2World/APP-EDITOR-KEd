@@ -1,0 +1,6 @@
+MAKE Version 3.7  Copyright (c) 1987, 1994 Borland International
+	G:\BCOS2\bin\bcc -a1 -P -xp- -xf- -xd- -sm -c -RT- -w -w-sig -w-ucp -Ig:\bcos2\include  -Oi -Oc -Ob -nos2_objs xfile.cpp 
+Borland C++ Version 4.1 Copyright (c) 1993, 1994 Borland International
+xfile.cpp:
+	g:\bcos2\bin\tlink /Toe /s /ap /c /Oc /A:5 /B:0x10000 /w! /S:F000 @MAKE0001.@@@
+Turbo Link  Version 1.5 for OS/2 Copyright (c) 1994 Borland International

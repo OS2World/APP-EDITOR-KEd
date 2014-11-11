@@ -1,0 +1,56 @@
+              KEd  Kudzu Text Editor version control
+
+
+PLANNED:
+2.##
+March - April 94
+support for keyboard remapping
+word wrap and configurable right margins
+new windowing system
+
+2.07
+February 94
+increased capacity: maximum is now 32MB
+improved support for HPFS file names in file load window (longer names)
+added support for ALL OS/2 text modes: 80 and 132 columns, 25,43, and 50 rows
+added support for 1 key menu selection when main menu is shown
+              ie: press <esc> then <s> for search menu
+added "Quote" option when pasting a block (see readme.doc)
+fixed bug: over 1000 search and replace operations in one file would fail
+fixed bug: pasting a block into KEd from an OS/2 VIO window was incorrect
+fixed bug: certain "delete block" operations would fail to refresh screen
+fixed bug: the screen if you had shelled was displayed on exit
+           now the original screen is always redisplayed
+known bug: tab handling is incorrect (not fixed in 2.07)
+
+2.06
+October 93
+improved speed a bit
+fixed bug: HPFS did not save files in correct case
+fixed bug: dialog boxes could terminate on non-printing keystrokes
+fixed bug: Find Previous now mapped to Ctrl-V
+added support to show NumLock status
+added support for setting/unsetting NumLock in INI file
+added support to locate KED.HLP file in any OS/2 HELP directory
+
+
+2.05
+August 93
+supports shelling to 4OS2 command interpreter as well as CMD.EXE
+added support for jump to next/previous word
+added support for delete to EOL/BOL
+added a great icon :-)
+first CompuServe release
+
+2.04
+July 93
+internal release
+fixed video detection
+fixed help path support
+
+
+2.03
+May 93
+first non-beta public release
+
+

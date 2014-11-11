@@ -1,0 +1,63 @@
+/*********************************************************************
+  This approach will work.
+
+  typedef struct IniVar
+  { Vartype type;  void *value;  char *Name;  char *Group; };
+
+  Of the 4 struct members, only "Name" and "Group" are public
+  { Int, &Normal, "Normal Color", "View Colors" },
+     or
+  { Int, &Settings.View1.Normal, "Normal Color", "View1 Colors" },
+
+
+  The only thing I don't like is the ugly cast for Ints.
+  *(int *)inivar[i].value = atoi(p + 2);       // YUUCH!
+  but it's all internal....
+
+  Seems like a Template would work....
+
+************************************************************************/
+
+int test1 = 100;
+
+int test2 = 200;
+
+int columns = 80;
+int rows    = 25;
+
+int Normal = 0;
+int Highlight = 0;
+int Block  = 0;
+int Block_Cursor = 0;
+int Border = 0;
+int Search = 0;
+
+
+char Teststring1[80] = "Hello world!";
+
+char Teststring2[80] = "Here I am";
+
+/*--------------------------------------------------------------------*/
+
+IniVar inivar[] =
+{
+  { Int, &test1, "Testvariable1", "Integers" },
+
+  { String,     Teststring1,     "Teststring1",     "Strings"    },
+
+  { Int,     &test2,     "Testvariable2",     "Integers"    },
+
+  { String,     Teststring2,     "Teststring2",     "Strings"    },
+
+  { Int, &columns, "Columns", "Video" },
+  { Int, &rows,    "Rows",    "Video" },
+
+  { Int, &Normal, "Normal Color", "View Colors" },
+  { Int, &Highlight, "Highlight Color", "View Colors" },
+  { Int, &Block, "Block Color", "View Colors" },
+  { Int, &Block_Cursor, "Block Cursor Color", "View Colors" },
+  { Int, &Border, "Border Color", "View Colors" },
+  { Int, &Search, "Search Color", "View Colors" }
+
+
+};

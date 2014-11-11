@@ -1,0 +1,8 @@
+  This archive contains KEd v2.10, the current release candidate.
+  The major new feature is support for movable and sizable windows.
+  Internally, though, there is a completely new Keyboard input 
+  system, object-oriented windows, and a new file loading system.
+  An OS/2 TRAP handler has been implemented, and should allow me
+  to find fatal errors faster.
+  These new internal systems will allow me to expand the functionality
+  quickly and bring up user defined macros and many other capabilities.

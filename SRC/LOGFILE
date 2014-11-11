@@ -1,0 +1,361 @@
+file edit.cpp line 422 settings.numlock_on = 0
+EXE_DIR =  C:\DLUGED\ED-1292\KED217\KED.EXE
+file edit.cpp line 164 settings.numlock_on = 0
+           BEFORE   SETTINGS  LOADED           
+settings struct in memory 
+view_defaults 
+location 0  x = 2 y = 0
+location 1  x = 1 y = 0
+location 2  x = 30 y = 7
+location 3  x = 10 y = 8
+location 4  x = 5 y = 2
+location 5  x = 1 y = 1
+location 6  x = 0 y = 0
+location 7  x = 10 y = 5
+location 8  x = 2 y = 2
+location 9  x = 10 y = 2
+location 10  x = 14 y = 2
+location 11  x = 18 y = 2
+location 12  x = 42 y = 2
+location 13  x = 34 y = 2
+location 14  x = 26 y = 2
+location 15  x = 38 y = 2
+ more view_defaults 
+ toplines = 1 bottomlines = 1
+ flags = 0x3
+ vert_scroll_margin = 0
+ horz_scroll_margin = 0
+ view_page_mode = 1
+ block_mode = 0
+ color set = 9
+ tab_size = 4
+ RightMargin = 100
+ QuotePrefix = °>>°
+backup_path = °*.BAK°
+tempfile_path = °*.S$°
+help_path = °°
+flags = 0x6
+ write_eof = 0
+ numlock_on = 0
+  extension = °C°
+ setting.c setting path =  ked.ini
+ setting.c open fail =  ked.ini
+ Settings loaded cur dir =0
+           BEFORE   SETTINGS  LOADED           
+settings struct in memory 
+view_defaults 
+location 0  x = 2 y = 0
+location 1  x = 1 y = 0
+location 2  x = 30 y = 7
+location 3  x = 10 y = 8
+location 4  x = 5 y = 2
+location 5  x = 1 y = 1
+location 6  x = 0 y = 0
+location 7  x = 10 y = 5
+location 8  x = 2 y = 2
+location 9  x = 10 y = 2
+location 10  x = 14 y = 2
+location 11  x = 18 y = 2
+location 12  x = 42 y = 2
+location 13  x = 34 y = 2
+location 14  x = 26 y = 2
+location 15  x = 38 y = 2
+ more view_defaults 
+ toplines = 1 bottomlines = 1
+ flags = 0x3
+ vert_scroll_margin = 0
+ horz_scroll_margin = 0
+ view_page_mode = 1
+ block_mode = 0
+ color set = 9
+ tab_size = 4
+ RightMargin = 100
+ QuotePrefix = °>>°
+backup_path = °*.BAK°
+tempfile_path = °*.S$°
+help_path = °°
+flags = 0x6
+ write_eof = 0
+ numlock_on = 0
+  extension = °C°
+ setting.c setting path =  C:\DLUGED\ED-1292\KED217\KED.INI
+ setting.c open fail =  C:\DLUGED\ED-1292\KED217\KED.INI
+loaded settings from exe dir = 0
+file edit.cpp line 166 settings.numlock_on = 0
+edit.cpp line 168 shell_command.s = °  cmd.exe /k°
+mylib_open rc = 0 ked file handle = 10 os2 file handle = 10
+mylib_close rc = 0 file handle = 10
+mylib_close rc = 0 file handle = 10
+file edit.cpp line 176 settings.numlock_on = 0
+ keybrd_setup org settings.numlock_on = 0
+ keybrd_setup setting NUMLOCK OFF 
+new_sheet_general creating space for sheet_mem
+new_sheet_general creating space 
+ new_sheet_general sheet = 468058113 sheet ptr = 0x000de576
+new_sheet_general allocating marks
+ new_scrap sheet = 468058113
+edit.cpp line 182 shell_command.s = °  cmd.exe /k°
+ normalize_filename entry filename     = °futures.doc°
+ normalize_filename entry default_path = °C:\DLUGED\ED-1292\KED217\°
+ normalize_filename entry default_ext  = °C°
+normalize_filename line 302 s  = °°
+ normalize_filename returning filename = C:\DLUGED\ED-1292\KED217\futures.doc
+ locate_view, view NOT found
+new_sheet_general creating space 
+ new_sheet_general sheet = 399114241 sheet ptr = 0x000de15a
+new_sheet_general allocating marks
+ new_sheet, active_sheet = 399114241 my_active_sheet = 0x000de15a
+sheet debug put_line, get_line =  
+ new view win height = 25 width = 80
+ new view general passed params height = 25 width = 80
+ view_make_active  active_view = 394002433 active_sheet = 399114241
+ view_load_file entry name        = °futures.doc°
+ view_load_file entry default_dir = °°
+ view_load_file  entry default_ext = °C°
+ view_load_file fname = futures.doc
+ view_load_file my_org_name = °futures.doc°
+ view_load_file name = futures.doc
+ view_load_file default_name = °°
+ view_load_file extension = °C°
+ view_load_file my_org_name = °futures.doc°
+ get_load_name fname = °futures.doc°
+ get_load_name default_name = °°
+ get_load_name extension = °C°
+ normalize_filename entry filename     = °futures.doc°
+ normalize_filename entry default_path = °C:\DLUGED\ED-1292\KED217\°
+ normalize_filename entry default_ext  = °C°
+normalize_filename line 302 s  = °°
+ normalize_filename returning filename = C:\DLUGED\ED-1292\KED217\futures.doc
+ get_load_name line 35 fname = °C:\DLUGED\ED-1292\KED217\futures.doc°
+ get_load_name line 36 default_name = °futures.doc°
+ get_load_name extension = °C°
+ filename_iswild returning FALSE
+ view_load_file got fname = C:\DLUGED\ED-1292\KED217\futures.doc
+sheet_load filename = °C:\DLUGED\ED-1292\KED217\futures.doc°
+sheet_load after xopen, before xgetline loop 
+ in myfgets          
+sheet_load line  0  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  1  = °                  FUTURES DOC°
+sheet debug put_line, get_line =                    FUTURES DOC
+ in myfgets          
+sheet_load line  2  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  3  = °          This charts the course for KED future development°
+sheet debug put_line, get_line =            This charts the course for KED future development
+ in myfgets          
+sheet_load line  4  = °          Items listed mostly concern internal linkages°
+sheet debug put_line, get_line =            Items listed mostly concern internal linkages
+ in myfgets          
+sheet_load line  5  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  6  = °November 21, 1994  next version after 2.15°
+sheet debug put_line, get_line =  November 21, 1994  next version after 2.15
+ in myfgets          
+sheet_load line  7  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  8  = °          1. increase efficiency by eliminating vmem_trans(active_view)°
+sheet debug put_line, get_line =            1. increase efficiency by eliminating vmem_trans(active_view)
+ in myfgets          
+sheet_load line  9  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  10  = °             create a linked-list class that holds active views, and°
+sheet debug put_line, get_line =               create a linked-list class that holds active views, and
+ in myfgets          
+sheet_load line  11  = °             will in-line return the current active_view. Only functions°
+sheet debug put_line, get_line =               will in-line return the current active_view. Only functions
+ in myfgets          
+sheet_load line  12  = °             that change the current view should require write access.°
+sheet debug put_line, get_line =               that change the current view should require write access.
+ in myfgets          
+sheet_load line  13  = °             NOTE: possibly use an array. Should not need very many°
+sheet debug put_line, get_line =               NOTE: possibly use an array. Should not need very many
+ in myfgets          
+sheet_load line  14  = °             entries.°
+sheet debug put_line, get_line =               entries.
+ in myfgets          
+sheet_load line  15  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  16  = °          1A. do the same for sheets°
+sheet debug put_line, get_line =            1A. do the same for sheets
+ in myfgets          
+sheet_load line  17  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  18  = °             NOTE: leave most of the vmem stuff in sheet.cpp°
+sheet debug put_line, get_line =               NOTE: leave most of the vmem stuff in sheet.cpp
+ in myfgets          
+sheet_load line  19  = °             The low-level sheet functions are too complex to change....°
+sheet debug put_line, get_line =               The low-level sheet functions are too complex to change....
+ in myfgets          
+sheet_load line  20  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  21  = °          2. create a mark class to hold the mark array and return°
+sheet debug put_line, get_line =            2. create a mark class to hold the mark array and return
+ in myfgets          
+sheet_load line  22  = °             the most common functions in-line°
+sheet debug put_line, get_line =               the most common functions in-line
+ in myfgets          
+sheet_load line  23  = °             (like get_mark() )°
+sheet debug put_line, get_line =               (like get_mark() )
+ in myfgets          
+sheet_load line  24  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  25  = °          3. create a view class and sheet class°
+sheet debug put_line, get_line =            3. create a view class and sheet class
+ in myfgets          
+sheet_load line  26  = °            °
+sheet debug put_line, get_line =              
+ in myfgets          
+sheet_load line  27  = °             compose classes with mark class inside each°
+sheet debug put_line, get_line =               compose classes with mark class inside each
+ in myfgets          
+sheet_load line  28  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  29  = °          NOTES:°
+sheet debug put_line, get_line =            NOTES:
+ in myfgets          
+sheet_load line  30  = °          Creating view and sheet classes should simplify the low-level°
+sheet debug put_line, get_line =            Creating view and sheet classes should simplify the low-level
+ in myfgets          
+sheet_load line  31  = °          functions because sheets and views will always know which °
+sheet debug put_line, get_line =            functions because sheets and views will always know which 
+ in myfgets          
+sheet_load line  32  = °          objects they are acting on, and passing a view or sheet param°
+sheet debug put_line, get_line =            objects they are acting on, and passing a view or sheet param
+ in myfgets          
+sheet_load line  33  = °          to a function will go away. Thus, code will be faster, smaller,°
+sheet debug put_line, get_line =            to a function will go away. Thus, code will be faster, smaller,
+ in myfgets          
+sheet_load line  34  = °          and easier to maintain.°
+sheet debug put_line, get_line =            and easier to maintain.
+ in myfgets          
+sheet_load line  35  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  36  = °========================================================================°
+sheet debug put_line, get_line =  ========================================================================
+ in myfgets          
+sheet_load line  37  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  38  = °          1. use Borland string class for many of the complex°
+sheet debug put_line, get_line =            1. use Borland string class for many of the complex
+ in myfgets          
+sheet_load line  39  = °             string functions.°
+sheet debug put_line, get_line =               string functions.
+ in myfgets          
+sheet_load line  40  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  41  = °             Like stuff in dialog box and dirname and dirlist °
+sheet debug put_line, get_line =               Like stuff in dialog box and dirname and dirlist 
+ in myfgets          
+sheet_load line  42  = °             files.°
+sheet debug put_line, get_line =               files.
+ in myfgets          
+sheet_load line  43  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  44  = °          2. write an asm "smart" exception handler that will dump°
+sheet debug put_line, get_line =            2. write an asm "smart" exception handler that will dump
+ in myfgets          
+sheet_load line  45  = °             the call stack to disk upon traps.°
+sheet debug put_line, get_line =               the call stack to disk upon traps.
+ in myfgets          
+sheet_load line  46  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  47  = °             CIS messages suggest using DosGetExceptionFromEIP°
+sheet debug put_line, get_line =               CIS messages suggest using DosGetExceptionFromEIP
+ in myfgets          
+sheet_load line  48  = °             to walk the call stack in excpt handler. undoc'ed °
+sheet debug put_line, get_line =               to walk the call stack in excpt handler. undoc'ed 
+ in myfgets          
+sheet_load line  49  = °             at present 12/94°
+sheet debug put_line, get_line =               at present 12/94
+ in myfgets          
+sheet_load line  50  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  51  = °          3. rewrite the file open/close sheet load/save into °
+sheet debug put_line, get_line =            3. rewrite the file open/close sheet load/save into 
+ in myfgets          
+sheet_load line  52  = °             a class that includes all the smart save and °
+sheet debug put_line, get_line =               a class that includes all the smart save and 
+ in myfgets          
+sheet_load line  53  = °             backup file features. Expand default extensions to°
+sheet debug put_line, get_line =               backup file features. Expand default extensions to
+ in myfgets          
+sheet_load line  54  = °             20 or 30. use the string classes for filename °
+sheet debug put_line, get_line =               20 or 30. use the string classes for filename 
+ in myfgets          
+sheet_load line  55  = °             manipulation.°
+sheet debug put_line, get_line =               manipulation.
+ in myfgets          
+sheet_load line  56  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  57  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  58  = °          4. create dialog and prompt box classes in TOW.°
+sheet debug put_line, get_line =            4. create dialog and prompt box classes in TOW.
+ in myfgets          
+sheet_load line  59  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  60  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  61  = °          5. ascii format INI file class°
+sheet debug put_line, get_line =            5. ascii format INI file class
+ in myfgets          
+sheet_load line  62  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  63  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet_load line  64  = °°
+sheet debug put_line, get_line =  
+ in myfgets          
+sheet debug put_line, get_line =  
+ end file_load, closing file 
+ view_load_file sheet_load TRUE for fname = C:\DLUGED\ED-1292\KED217\futures.doc
+edit.cpp line 458 shell_command.s = °  cmd.exe /k°
+file edit.cpp line 459 settings.numlock_on = 0
+v_flush sheet line = 0 v_flush w_row = 1 str =°°
+v_flush sheet line = 1 v_flush w_row = 2 str =°                  FUTURES DOC°
+v_flush sheet line = 2 v_flush w_row = 3 str =°°
+v_flush sheet line = 3 v_flush w_row = 4 str =°          This charts the course for KED future development°
+v_flush sheet line = 4 v_flush w_row = 5 str =°          Items listed mostly concern internal linkages°
+v_flush sheet line = 5 v_flush w_row = 6 str =°°
+v_flush sheet line = 6 v_flush w_row = 7 str =°November 21, 1994  next version after 2.15°
+v_flush sheet line = 7 v_flush w_row = 8 str =°°
+v_flush sheet line = 8 v_flush w_row = 9 str =°          1. increase efficiency by eliminating vmem_trans(active_view)°
+v_flush sheet line = 9 v_flush w_row = 10 str =°°
+v_flush sheet line = 10 v_flush w_row = 11 str =°             create a linked-list class that holds active views, and°
+v_flush sheet line = 11 v_flush w_row = 12 str =°             will in-line return the current active_view. Only functions°
+v_flush sheet line = 12 v_flush w_row = 13 str =°             that change the current view should require write access.°
+v_flush sheet line = 13 v_flush w_row = 14 str =°             NOTE: possibly use an array. Should not need very many°
+v_flush sheet line = 14 v_flush w_row = 15 str =°             entries.°
+v_flush sheet line = 15 v_flush w_row = 16 str =°°
+v_flush sheet line = 16 v_flush w_row = 17 str =°          1A. do the same for sheets°
+v_flush sheet line = 17 v_flush w_row = 18 str =°°
+v_flush sheet line = 18 v_flush w_row = 19 str =°             NOTE: leave most of the vmem stuff in sheet.cpp°
+v_flush sheet line = 19 v_flush w_row = 20 str =°             The low-level sheet functions are too complex to change....°
+v_flush sheet line = 20 v_flush w_row = 21 str =°°
+v_flush sheet line = 21 v_flush w_row = 22 str =°          2. create a mark class to hold the mark array and return°
+v_flush sheet line = 22 v_flush w_row = 23 str =°             the most common functions in-line°
+
+    Normal Closedown in LOGFILE 

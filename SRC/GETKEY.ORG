@@ -1,0 +1,420 @@
+/*****************************************************
+File: GETKEY.C      Copyright 1989 by Dlugosz Software
+   Functions to read a key, with support for
+   background processing and macros.  
+
+*****************************************************/
+#define INCL_SUB
+#define INCL_DOSPROCESS
+#define INCL_DOSDEVICES        // DosDevIoctl function for NUMLOCK set
+#define INCL_DOSSEMAPHORES
+#define INCL_NOPMAPI
+#include <os2.h>
+
+#include "usual.h"
+#include "getkey.h"
+#include "setting.h"
+#include "keycodes.h"  // need CTRLKEY def
+#include <string.h>
+#include "initkeys.h"
+
+#include "test.h"
+
+extern "C" {
+void  __pascal __far16 WPORTW(void);
+void  __pascal __far16 WPORTB(void);
+void  __pascal __far16 RPORTW(void);
+void  __pascal __far16 RPORTB(void);
+}
+
+
+static struct key_rec key_rec_t;
+
+struct key_rec& mykey_rec = key_rec_t;
+
+void inchar(void *);                // keyboard read thread
+static struct key_rec& read_que(void);
+static void   write_que(struct key_rec& krec);
+
+#define KBUFSIZE 1024
+         //static USHORT keyqueue[KBUFSIZE];     // holds key strokes until processed
+static key_rec  keyqueue[KBUFSIZE];     // holds key strokes until processed
+static USHORT rpos = 0;         // read position in key queue
+static USHORT wpos = 0;         // write position in key queue
+static USHORT num_keys = 0;
+bool   inchar_ready = FALSE;
+
+extern HMTX hkbdsem;
+extern HMTX hkquesem;
+extern HMTX hshell_ok_sem;
+extern bool recording;          // macro is being recorded
+extern bool play_macro;         // macro is being played
+
+/*******************************************************************
+         KBDKEYINFO fsState 
+#define KbdShift(kbci) ((kbci.fsState & LEFTSHIFT)||(kbci.fsState & RIGHTSHIFT))
+#define KbdCtrl(kbci)  ((kbci.fsState & LEFTCTRL) ||(kbci.fsState & RIGHTCTRL))
+#define KbdAlt(kbci)   ((kbci.fsState & LEFTALT)  ||(kbci.fsState & RIGHTALT))
+#define KbdCapsL(kbci) (kbci.fsState & CAPS)
+#define KbdNumL(kbci)  (kbci.fsState & NUMLOCK)
+*********************************************************************/
+
+extern char *macro;
+bool (* key_preprocess)(USHORT)= NULL;     // set to load HELP by hyprhelp.c
+//USHORT OldKey = 0x0000;
+USHORT KeyState = 0x0000;
+
+
+static void write_que(struct key_rec& krec)
+/******************************************************************
+     write a keyboard char entry into keyqueue 
+       called only by INCHAR thread
+*****************************************************************/
+{                                 
+ if((wpos+1 == rpos) || ((wpos+1 == KBUFSIZE) && (rpos == 0))) {
+   DosBeep(1000,500);
+ }
+// keyqueue[wpos] = key;
+ keyqueue[wpos].value = krec.value;
+ keyqueue[wpos].state = krec.state;
+
+// DBG_Q(dout<<" WRITE rpos = "<<rpos<<" wpos = "<<wpos<<" numkeys = "<<num_keys);
+ DBG_Q(dout<<" WRITE wpos = "<<wpos<<" numkeys = "<<num_keys);
+ DBG_Q(dout<<"   keyqueue hex key = "<<hex<< keyqueue[wpos].value<<dec);
+ DBG_Q(dout<<"  key = "<< LOUCHAR(keyqueue[wpos].value)<<endl);
+
+ wpos++;
+ if(wpos == KBUFSIZE) {
+    wpos = 0;
+ }
+}
+
+                               //static USHORT read_que(void)
+static struct key_rec& read_que(void)
+/************************************************************
+    read a char from key queue, and zero that entry in the queue array
+    called by getkey() from thread MAIN
+*******************************************************************/
+{
+ if(rpos == KBUFSIZE)  rpos = 0;           // wrap around to beginning
+ if(rpos == wpos) {
+      mykey_rec.value = 0x0000;
+      mykey_rec.state = 0x0000;
+      return mykey_rec;        // no keys left
+  }
+
+ mykey_rec.value = keyqueue[rpos].value;
+ mykey_rec.state = keyqueue[rpos].state;
+// DBG_Q(dout2<<" READ  rpos = "<<rpos<< " numkeys = "<<num_keys);
+// DBG_Q(dout2<<"   keyqueue hex key = "<<hex<< mykey_rec.value<<dec);
+// DBG_Q(dout2<<"  key = "<< LOUCHAR(mykey_rec.value)<<endl);
+ keyqueue[rpos].value = 0x00;              // zero out the queue
+ keyqueue[rpos].state = 0x00;
+ rpos++;
+ return mykey_rec;
+}
+
+/**********************************************************************/
+
+void inchar(void *)        /* this function runs as a separate  */
+{                          /* thread started in edit.c main()   */
+   KBDKEYINFO kbci;
+   KBDINFO kbdinfo;
+   kbdinfo.cb = sizeof(kbdinfo);
+   USHORT  xch = 0x00;                         /* extended key char   */
+   char    memkey = 0x00;
+
+   rc = KbdFlushBuffer(0);
+   rc = DosRequestMutexSem(hkbdsem, 200);  
+   inchar_ready = TRUE;                        // let main() continue
+   rc = DosReleaseMutexSem(hkbdsem);        
+
+   for (;;) {
+      rc = DosRequestMutexSem(hkbdsem, 50);  // getkey should release Sem fast
+      if(rc != 0) {
+         DBG_Q(dout<<" INCHAR ReqMutex kbdsem rc = "<<hex<<rc<<dec<<endl);
+      }
+      rc = KbdCharIn(&kbci, IO_WAIT, 0);
+
+//      _EDX = 0x00000060;
+//      RPORTB();
+//      memkey = _CL;
+      memkey = 100;           // test MOD 8-27-94
+      if(memkey <= 0x00) {
+//         DBG_INCHAR(dout<<" RPORTB FALSE says memkey = "<<hex<<memkey<<dec<<endl);
+         mykey_rec.owner = FALSE;    // clipboard paste
+      }
+      else {
+//         DBG_INCHAR(dout<<" RPORTB  TRUE says memkey = "<<hex<<memkey<<dec<<endl);
+         mykey_rec.owner = TRUE;     // key was depressed
+      }
+//#ifdef FUCKUP       
+      DBG_INCHAR(dout<<"inchar key state = "<<hex<<kbci.fsState);
+      DBG_INCHAR(dout<<" key hi = "<<kbci.chScan);
+      DBG_INCHAR(dout<<" key lo = "<< kbci.chChar);
+      DBG_INCHAR(dout<<" combined = "<<(kbci.chChar|(kbci.chScan<<8))<<dec<<endl);
+//#endif
+      rc = DosReleaseMutexSem(hkbdsem);       // let getkey go on
+
+      if(kbci.chChar == 0xE0){      /* ext key */
+         kbci.chChar = 0x00;
+      }
+    //    comment line above if you need to distinguish 101 keyboard keys
+    //    from "normal" keys. The keys between the normal keyboard and the
+    //    numeric keypad return a scan code of 0xE0. I don't find it useful
+    //    to identify those keys separately for the editor.
+
+         xch = (kbci.chChar | (kbci.chScan << 8));
+         mykey_rec.value = xch;
+         mykey_rec.state = kbci.fsState;
+                                                           
+      if(xch != 0x00){                          // we have a key
+         if(num_keys > (KBUFSIZE / 2)) {        // queue too full
+            rc = DosReleaseMutexSem(hkbdsem);       // let getkey() go on
+            DosSleep(1000);                // Sleep 1 sec should be safe
+            DBG_Q(dout<< "Inchar SLEPT while READ read "<<513-num_keys<<" keys"<<endl);
+         }
+         rc = DosRequestMutexSem(hkquesem, 500);  // wait .5 sec for Sem
+         if(rc != 0) {
+            DBG_Q(dout<< "INCHAR mutex rc = "<<hex<<rc<<dec<<endl);
+         }
+//         write_que(xch);
+         write_que(mykey_rec);
+         num_keys++;                                // test for NumLock on 
+         KeyState = (kbci.fsState & NUMLOCK) ? 0x0020 : 0x0000;
+
+         rc = DosReleaseMutexSem(hkquesem);       // and let inchar continue
+       }
+        if((xch == 0x5500) || (xch == 0x5600)){    // prepare for OS shell
+           rc = DosReleaseMutexSem(hshell_ok_sem);
+           DosSleep(100);                 // let shell go
+           while((rc = DosRequestMutexSem(hshell_ok_sem, 100)) != 0){
+              DosSleep(100);
+              DBG_INCHAR(dout<<"inchar waiting "<<xch<<endl);
+              rc = KbdCharIn(&kbci, IO_NOWAIT, 0);  // this work??? 10=8=93
+           }
+        }   // end if shell 
+  }      // end for(;;)
+}
+
+
+struct key_rec& getexkey(void)
+{
+/*********************************************************************
+   NOTE: "goto reject" in this function originally "threw away" the keystroke
+          I make sure it's gone by setting it to 0x00
+
+          May 15, 1994
+          Change this to getexkey, which returns pointer
+          to key_rec struct and create a shell getkey() function which
+          just returns a USHORT 
+
+          May 17, 1994
+          changed pointers to references
+*******************************************************************/
+reject:
+ USHORT mykey = 0x0000;
+ mykey_rec.value = 0x0000;
+ mykey_rec.state = 0x0000;
+
+//if (macro && (!recording)) {                 
+if (play_macro) {                 
+    DBG_MACRO(dout<<" in getexkey and calling read_from_macro"<<endl);
+//    mykey_rec.value = read_from_macro();
+    mykey_rec = read_from_macro();
+    return mykey_rec;
+}
+
+  if((num_keys==0) && (mykey==0x00)){         // empty key queue,  no OldKey
+     rc = DosRequestMutexSem(hkbdsem, -1L);   // wait forever for inchar
+     if(rc != 0) {
+        DBG_Q(dout<<"getkey ReqMutexSem rc = "<<hex<<rc<<dec<<endl);
+     }
+     rc = DosReleaseMutexSem(hkbdsem);        // give Sem back
+  }
+
+  if(num_keys > 0){                           // should have a key now
+     rc = DosRequestMutexSem(hkquesem, -1L);  
+     if(rc != 0) {
+        DBG_Q(dout<<"getkey ReqMutexSem rc = "<<hex<<rc<<dec<<endl);
+     }
+     mykey_rec = read_que();
+     DBG_KEY1(dout<<" getexkey state = "<<hex<<mykey_rec.state);
+     DBG_KEY1(dout<<" getexkey value = "<<mykey_rec.value<<dec<<endl);
+     num_keys--;
+     rc = DosReleaseMutexSem(hkquesem);      // give Sem back
+  }    
+
+if (key_preprocess != '\0')
+    if( !(*key_preprocess)(mykey_rec.value)){         // call that func
+        goto reject;
+    }
+
+if ((recording) && (mykey_rec.value > 0x0000) ) {   // kybd macro code
+    DBG_MACRO(dout<<" in getexkey, adding "<<hex<<mykey_rec.value<<dec<<" to buf"<<endl);
+//    put_key_in_macro_buf(mykey_rec.value);
+    put_key_in_macro_buf(mykey_rec);
+}
+                             
+return mykey_rec;
+}
+
+
+/************************************************************************/
+USHORT getkey()
+{
+//  USHORT mykey;
+reject:                            /* start over if rejected */
+ USHORT  mykey = 0x0000;       // for "goto reject" lines, throw away mykey
+//if (OldKey) {
+//   mykey= OldKey;
+//   OldKey= 0x0000;
+//   }
+
+  mykey_rec = getexkey();
+  mykey = mykey_rec.value;
+
+if (key_preprocess != '\0')
+    if( !(*key_preprocess)(mykey)){  // help system leaves a key in buffer
+        goto reject;
+    }
+return mykey;
+}
+
+/********************************************************************
+  look up key in extended key table and call the function 
+  associated with that key.  
+
+  returns:  USHORT QUIT or 0   
+***********************************************************************/
+
+//USHORT do_command(USHORT key)
+USHORT do_command(struct key_rec& krec)
+{
+  USHORT i;
+  SHORT retval = 0;
+  USHORT key = krec.value;
+  USHORT kstate = krec.state;
+  UCHAR hibyte = HIUCHAR(key);
+  UCHAR lobyte = LOUCHAR(key);
+
+      DBG_KEY1(dout<<'\n'<<"do_cmd key = "<<hex<< key);
+      DBG_KEY1(dout<<"    key hi = "<<HIUCHAR(key));
+      DBG_KEY1(dout<<"    key lo = "<<LOUCHAR(key));
+//      if(CTL_KEY(kstate)) DBG_KEY(dout<<"found CTRL key ");
+
+//      DBG_KEY(dout<<"    index = "<<dec<< i<<endl);
+//      DBG_KEY(dout<<"intern key_struct num "<<i<< " = "<<
+//          KeyNameVal[i].name<<" val = "<<hex<<KeyNameVal[i].num<<
+//          "  keystate = "<<kstate<<dec<<endl);
+
+         /* only map Ctrl-Key to +115 if hibyte < 73 because Ctrl-Arrow keys
+            do not need to be reampped. See KeyDef.cpp.... */
+  if((CTL_KEY(kstate)) && (hibyte < 73)) {                 // control + key
+//     DBG_KEY2(dout<<"found CTRL key "<<endl);
+                 //     i = 116 + lobyte;           // old value....
+     i = 115 + lobyte;
+  }
+  else
+     i = hibyte - 0x10;
+
+//  DBG_KEY2(dout<<"    index = "<<dec<< i<<endl);
+  DBG_KEY2(dout<<"intern key_struct num "<<i<<" val = "<<hex<<KeyNameVal[i].num<<
+        "  keystate = "<<kstate<<dec<<" name =  "<<KeyNameVal[i].name<<endl);
+
+  fptr do_func = KeyNameVal[i].func;
+  if(do_func != NULL) {              // check just to be sure
+    retval = do_func();
+  }
+  if(key == 0x2D00) {   // AltX
+    DBG_KEY2(dout<<"  key = "<<hex<<key<<dec<<" and Quitting"<<endl);
+    return CMD_QUIT;
+  }
+  else {
+    DBG_KEY1(dout<<" key = "<<hex<<key<<dec<< "  retval = "<<retval<<endl);
+    retval = 0x0000;
+    return retval;
+  }
+}
+
+
+/********************************************************************/
+bool key_ready()
+{
+//if (OldKey) 
+//  return TRUE;
+  if(num_keys == 0)                // queue empty
+    return FALSE;                     // do I need semaphore lock here ?
+//       rc = DosRequestMutexSem(hkquesem, -1L);     // 
+//       if(rc != 0) {
+//          DBG_INCHAR(dout<<" RequestSem fail in getkey line 233  error = %d", rc);
+//       }
+//      OldKey = keyqueue[kquepos];            // take key from queue          
+//        OldKey = read_que();
+//      rc = DosReleaseMutexSem(hkquesem);          // 
+//       if(rc != 0) {
+//         DBG_INCHAR(dout<<" ReleaseSem fail in getkey line 238  error = %d", rc);
+//       }
+
+//   OldKey= keyqueue[kquepos];          // NOTE: don't remove key from queue
+   else {
+   return TRUE;
+   }
+}
+
+
+/************************************************************************/
+bool keybd_setup(void)            // setup special keyboard settings
+{
+  bool ok;
+  settings.numlock_on ? ok = numlock_set(TRUE): ok = numlock_set(FALSE);
+  return ok;    
+}
+
+/************************************************************************/
+
+bool numlock_set(bool on_off)
+{
+struct  keyparams {
+        USHORT ShiftState;
+        BYTE Nls;
+        } Data;
+
+HFILE  KbdHandle;
+ULONG act;
+ULONG plio, dlio;
+
+ULONG  KEYBOARD_CATEGORY   =   0x0004;
+ULONG  KBD_GETSHIFTSTATE   =   0x0073;
+ULONG  KBD_SETSHIFTSTATE   =   0x0053;
+
+   rc = DosOpen((PBYTE)"kbd$", &KbdHandle, &act, 0L, 0, FILE_OPEN,
+        OPEN_ACCESS_READONLY | OPEN_SHARE_DENYNONE | OPEN_FLAGS_NOINHERIT,
+        0L);
+   if(rc) return FALSE;
+
+    plio = 0L;
+    dlio = sizeof(Data);
+    rc = DosDevIOCtl(KbdHandle, KEYBOARD_CATEGORY, KBD_GETSHIFTSTATE,
+         NULL, plio, &plio,                       /* Input data  */
+         (PVOID) &Data, dlio, &dlio);             /* Output data */
+    if(rc) return FALSE;
+
+    on_off ? (Data.ShiftState |= 0x0020) : (Data.ShiftState &= ~0x0020);
+    Data.Nls        = 0x00;
+
+    plio = sizeof(Data);
+    dlio = 0L;
+    rc = DosDevIOCtl(KbdHandle, KEYBOARD_CATEGORY, KBD_SETSHIFTSTATE,
+                    (PVOID) &Data, plio, &plio,
+                    NULL, dlio, &dlio);
+    if(rc) 
+      return FALSE;
+    else
+      on_off ? (KeyState = 0x0020) : (KeyState = 0x0000); 
+
+    rc = DosClose(KbdHandle);
+    if(rc) return FALSE;
+
+return TRUE;
+}

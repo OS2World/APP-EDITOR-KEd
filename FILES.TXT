@@ -1,0 +1,25 @@
+
+                     KEd  Kudzu Text Editor for OS/2
+
+                             FILES.DOC
+
+You should have received all these files in the distribution archive.
+If you are missing any, you can contact Kudzu Software, or download the
+latest version from these sources:
+
+Compuserve OS2USER forum, Library 4
+Compuserve OS2SHARE forum 
+Pete Norloff's OS2 Shareware BBS  703-385-4325
+Atlanta Shareware South           404-370-0736
+
+The distribution files:
+
+FILES.DOC      this file
+REGISTER.DOC   used to register your copy of KEd
+KED.EXE        the executable
+KED.HLP        on-line hypertext help
+WHATS.NEW      list of versions/features and latest enhancements
+FILE_ID.DIZ    for BBS systems descriptions
+README.DOC     introduction to KEd. Brief description of some of the
+               features and legal text.
+

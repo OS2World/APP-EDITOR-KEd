@@ -1,0 +1,1554 @@
+
+C:\DLUGED\ED-1292\KED210\HELP]REM SETUP GLOBAL VARS 
+ 
+ This cmd file will strip all formatting commands from EDITOR.CSH 
+ and output a TXT file for KEd documentation 
+ 
+ Press any key to continue 
+ Input file ? (default is EDITOR.TMP) 
+ Output Filename ? (default is EDITOR.001) 
+Processing  Input  C:\dluged\ed-1292\ked210\help\EDITOR.TMP
+processing file  C:\DLUGED\ED-1292\KED210\HELP\EDITOR.TMP  line  1
+ 
+ 
+ 
+              Editor Help
+ 
+     ÕÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+     ³       Kudzu Editor              ³
+     ³ Copyright 1993,4 Kudzu Software ³
+     ³                                 ³
+     ³ Kudzu Software                  ³
+     ³ 1452 North Ave NE               ³
+     ³ Atlanta, GA 30307               ³
+     ³                                 ³
+     ³ Compuserve ID:76254,764         ³
+     ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+
+     Help is available on these topics:
+
+            Function Keys
+            Keyboard Commands
+            The Status Line
+            Command Line Options
+            About the Editor
+ 
+ 
+ 
+              The Status Line
+ 
+    The following characters are displayed
+ on the status line to indicate various
+ modes as well as the cursor row and column.
+    R  Recording keyboard macro
+    ±  STREAM  block mode
+    ğ  LINES   block mode
+    ş  COLUMNS block mode
+      Auto-indent ON
+    ë  File changed
+    R  Row number
+    C  Column number
+  I/O  Insert/Overwrite mode
+
+  If the active view is a duplicate, then the
+duplicate number followed by a bullet () will
+be displayed before the filename.
+ 
+ 
+ 
+              Function Keys
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³F1          ³F2           ³
+ ³Help        ³Print menu   ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³F3          ³F4           ³
+ ³File menu   ³Settings menu³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³F5   Mark   ³F6   Mark    ³
+ ³Block start ³Block end    ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³F7          ³F8           ³
+ ³Block menu  ³Search menu  ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³F9          ³F10          ³
+ ³            ³File List    ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ 
+ 
+ 
+              Shifted Function Keys
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³Shift-F1    ³Shift-F2     ³
+ ³            ³OS2 Shell    ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³Shift-F3    ³Shift-F4     ³
+ ³OS2 Command ³Shell menu   ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³Shift-F5    ³Shift-F6     ³
+ ³Jump start  ³Jump end     ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³Shift-F7    ³Shift-F8     ³
+ ³Record macro³             ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³Shift-F9    ³Shift-F10    ³
+ ³            ³             ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ 
+ 
+              Cursor Commands
+ 
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Cursor left            Left arrow
+ Cursor right           Right arrow
+ Cursor up              Up arrow
+ Cursor down            Down arrow
+ Beginning of line      Home
+ End of line            End
+ Word left              Ctrl-Left arrow
+ Word right             Ctrl-Right arrow
+ Scroll up              Ctrl-Q
+ Scroll down            Ctrl-Z
+ Page up                PgUp
+ Page down              PgDn
+ Beginning of file      Ctrl-PgUp
+ End of file            Ctrl-PgDn
+ 
+ 
+ 
+              Insert/Delete Commands
+ 
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Insert/Overwrite mode  Ins
+ Insert line            Enter
+ Delete line            Ctrl-Y
+ Delete to end          Ctrl-E
+ Delete to beginning    Ctrl-B
+ Delete word left       Ctrl-R
+ Delete word right      Ctrl-T
+ Delete character left  Backspace
+ Delete character       Del
+
+ 
+ 
+ 
+              Window Commands
+ 
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Next window            Alt-N
+ Previous window        Alt-M
+ Window Size mode       Ctrl-W
+ Window Move mode       Alt-W
+
+               Macro Commands
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Macro record start     Shift-F7
+ Macro record end       Alt-F7
+ Macro replay           Alt-F7
+
+ 
+ 
+ 
+              File Commands
+ 
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ File Menu              Alt-F
+ Save active file       Alt-S
+ Quit active file       Alt-Q
+ Exit KEd               Alt-X
+
+ 
+ 
+ 
+              Miscellaneous Commands
+ 
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Goto line              Alt-G
+ Find Next occurance    Ctrl-N
+ Find preVious          Ctrl-V
+ Display OS2 screen     Alt-D
+ Pop-up the ASCII box   Alt-A
+ Time and date stamp    Alt-T
+ Display editor version Alt-V
+ Insert key code        Alt-K
+ Quick paste            Alt-P
+ 
+ 
+ 
+              OS2 Shell
+ 
+Temporarily leaves the editor and loads a copy of
+the OS2 command processor.  The shell allows you
+to execute OS2 commands without having to quit the
+editor first.  Issue an EXIT command at the OS/2
+prompt to return to the editor.
+ 
+ 
+ 
+              Keyboard Macro
+ 
+Press Shift-F7 to begin recording a keyboard
+macro. R will appear on the left of the status
+line to indicate macro recording in process.
+Press Alt-F7 to end the macro.
+
+To playback the macro, press Alt-F7.
+ 
+ 
+ 
+              Command Line Options
+ 
+The editor can be configured using command line options,
+and files can loaded and positioned from the command line.
+Options can be placed in environment variables and are
+automatically added to the command line each time the
+editor is run.
+
+ &<name>      Include an environment string
+ #<number>    Position cursor to a line
+ <filename>   Load a file
+ -G<filename> Load settings file if not KED.INI
+ 
+ 
+ 
+              Command Line Options
+ 
+The environment string EDITOR is prepended to the command
+line, so startup options can be placed in it.  The &<name>
+option will include the contents of the named variable at
+that point, so you can refer to other strings filled with
+options.
+
+You can load multiple files and even position the cursor in
+each file, with a command such as
+
+   EDIT readme.doc #12 foo util.doc test.cpp #10
+
+This will load readme.doc, foo, util.doc, and test.cpp, and
+position the cursors in two of the files.
+ 
+ 
+ 
+              File Menu
+ 
+LOAD:
+  Load file into active view
+OPEN:
+  Load file into new view
+SAVE:
+  Save file in active view
+SAVE_AS:
+  Change name and save file
+NEW WINDOW:
+  Create a new view
+DUPLICATE:
+  Open a new view into same file
+CLOSE:
+  Close the active view
+QUIT:
+  Quit editing session
+ 
+ 
+ 
+              Load
+ 
+ Loads a file into the active view.
+ Type in the name of the file to load
+ or use OS2 wildcard characters (* and
+ ?) to get a directory listing.
+
+ 
+ 
+ 
+              Open
+ 
+ Creates a new window and requests the
+ name of a file to load into it.  Use
+ OS2 wildcard characters (* and ?) to
+ get a directory listing.
+
+ 
+ 
+ 
+              Save
+ 
+ Unconditionally writes the current
+ file in the active view to disk.
+
+
+ 
+ 
+ 
+              Save As
+ 
+ Writes a file to disk.  Type in a
+ filename or press Enter to accept the
+ default name.
+
+
+ 
+ 
+ 
+              New
+ 
+ Creates a new window with no file
+ loaded.  To load a file into the
+ window, use the Load command.
+
+
+ 
+ 
+ 
+              Duplicate
+ 
+ Creates a duplicate view of the active
+ view.  This can be used to look at one
+ or more different parts of the file
+ simultaneously.
+
+ 
+ 
+ 
+              Close
+ 
+ Closes the active view.  If the file
+ in the view has been changed, then you
+ will be asked to save it, discard your
+ changes, or cancel.
+
+ 
+ 
+ 
+              Quit
+ 
+ Exits the editor. If any files have
+ been changed, you will be asked if you
+ want to save or disard each one. If
+ a resume file is being used, then it
+ will be packed-up before exiting.
+
+ 
+ 
+ 
+              Block Menu
+ 
+COPY:
+  Copy block into scrap buffer
+DELETE:
+  Copy block then zap it
+PASTE:
+  Paste scrap buffer at cursor
+ZAP:
+  Erases text in current block
+QUOTE:
+  Prefix paste lines with chars
+ADJUST:
+  Adjust block left or right
+MODE:
+  Change block selection mode
+VIEW:
+  Open view into the scrap buffer
+READ:
+  Read block from disk
+WRITE:
+  Write block to disk
+ 
+ 
+ 
+              Copy Block
+ 
+ Copies the active block into the
+ scrap buffer.  The previous contents
+ of the scrap buffer are lost.
+
+
+ 
+ 
+ 
+              Delete Block
+ 
+ Copies the active block into the scrap
+ buffer and then deletes the block from
+ memory.  The previous contents of the
+ scrap buffer are lost.
+
+ 
+ 
+ 
+              Paste Block
+ 
+ Inserts the contents of the scrap
+ buffer into the active view starting
+ at the cursor position. The scrap
+ buufer remains intact.
+
+ 
+ 
+ 
+              Zap Block
+ 
+ Deletes the text in the active block.
+ The scrap buffer is unaffected.
+
+
+
+ 
+ 
+ 
+              Quote Block
+ 
+ Paste the current buffer into current
+ file and prefixes each line with a
+ user-definable string
+
+
+ 
+ 
+ 
+              Adjust Block
+ 
+ Shifts the active block left or right.
+ Enter a negative number at the prompt
+ to shift the block left instead of
+ right.
+
+ 
+ 
+ 
+              Change Block Mode
+ 
+ Changes the block selection mode to
+ one of the following three:
+ 
+ STREAM
+   All characters between the beginning
+   and ending marks are selected.
+
+ LINE
+   All lines from the beginning mark to
+   the line above the ending mark are
+   selected.
+
+ COLUMN
+   A rectangular portion of text with
+   the starting mark as the upper left
+   corner and the ending mark as the
+   lower right right corner is selected
+
+
+ 
+ 
+ 
+              View Scrap
+ 
+ Opens a view window into the current
+ scrap buffer.  Any changes to the view
+ will affect the contents of the scrap
+ buffer.
+
+ 
+ 
+ 
+              Read Block
+ 
+ Inserts text from a disk file into the
+ view starting at the cursor location.
+ Enter the name of the file to insert
+ or use OS2 wildcard characters to get
+ a directory listing.
+
+ 
+ 
+ 
+              Write Block
+ 
+ Writes the active block to disk. If
+ If no block is active, then the scrap
+ buffer is written instead.
+
+
+ 
+ 
+ 
+              Mark Start
+ 
+ Marks the cursor position as the start
+ position for the block. If the end mark
+ is in a legal position for the current
+ block mode, then the block will become
+ active.
+
+ 
+ 
+ 
+              Mark End
+ 
+ Marks the cursor position as the end
+ position for the block. If the start
+ mark is already in a legal position
+ for the current block mode, then the
+ block will become active.
+
+ 
+ 
+ 
+              Jump to Start
+ 
+ Provided that the block start marker
+ has been previously set, the cursor
+ will jump to the beginning of the
+ block.
+
+ 
+ 
+ 
+              Jump to End
+ 
+ Provided that the block end marker has
+ been previously set, the cursor will
+ jump to the ending of the block.
+
+
+ 
+ 
+ 
+              Window Size Help
+ 
+
+You are in "window size" mode. Press an arrow
+key to move the lower right corner of the 
+window and make it larger or smaller. The 
+upper left corner is "anchored", and will
+not move. You will notice that the cursor
+has disappeared because you cannot edit text
+until you exit this mode.
+
+ Use the arrow keys to size the window.
+
+ Press the ESC key to exit window size mode.
+
+ 
+ 
+ 
+              Move Help
+ 
+
+You are in "window move" mode. Press an arrow
+key to move the window up and down or left
+and right. You can move the window entirely
+off screen, but there is really no way to
+easily redisplay it. You will notice that the 
+cursor has disappeared because you cannot 
+edit text until you exit this mode.
+
+ Use the arrow keys to move the window.
+
+ Press the ESC key to exit window move mode.
+
+ 
+ 
+ 
+              Settings Menu
+ 
+LOAD:
+   Load new settings
+SAVE:
+   Save current settings
+COLORS:
+   Modify editor colors
+EDITOR:
+   Change editor defaults
+VIEW:
+   Change view defaults
+PATH:
+   Change default paths
+ 
+ 
+ 
+              Load Settings
+ 
+ Loads a new settings file from disk.
+ Type in the name of the settings file
+ or use wildcards to get a directory
+ listing. The new settings will take
+ over immediately.
+
+ 
+ 
+ 
+              Save Settings
+ 
+ Saves the current settings to disk.
+ Type in a name for the settings file
+ or use wildcards to alter the default
+ name.
+
+ 
+ 
+ 
+              Edit Color Sets
+ 
+ Modify the editor colors. You can
+ alter the color sets for any part of
+ the editor.
+
+
+ 
+ 
+ 
+              Modify Editor Defaults
+ 
+ Modify the default editor settings.
+ You may change editor defaults, such
+ as the default file extension and the
+ default view settings, to suit your
+ needs.
+
+ 
+ 
+ 
+              Modify View Defaults
+ 
+ Modify the active view's settings.
+ You can change the various parameters
+ for the active view, such as the auto-
+ indent mode and the tab settings.
+
+ 
+ 
+ 
+              Change Default Pathnames
+ 
+ Change the default path for the help
+ file as well as the paths for backup
+ files and temporary files.
+
+
+ 
+ 
+ 
+              Color Set Menu
+ 
+    Edit color set:
+
+THIS VIEW      MENU
+DIALOG         REDBOX
+FILELIST       STATUS LINE
+HELP           ASCII BOX
+
+VIEW DEFAULTS:
+  Edit the default view color sets
+GET DEFAULT:
+  Copy a default colorset to the active view
+ 
+ 
+ 
+              Edit Active View Colors
+ 
+ Edit the color set of the active view.
+ Only the active view's colors will be
+ affected; the default color sets will
+ not be changed.
+
+ 
+ 
+ 
+              Edit Dialog Box Colors
+ 
+ Edit the color set for all dialog
+ boxes.
+
+
+ 
+ 
+ 
+              Edit Filelist Colors
+ 
+ Edit the color set for the directory
+ list.
+
+
+ 
+ 
+ 
+              Edit Help Colors
+ 
+ Edit the color set for the help
+ window.
+
+
+ 
+ 
+ 
+              Edit Menu Colors
+ 
+ Edit the color set for all menus.
+
+
+
+ 
+ 
+ 
+              Edit Redbox Colors
+ 
+ Edit the color set for the redbox
+ error message window.
+
+
+ 
+ 
+ 
+              Edit Status Colors
+ 
+ Edit the color set for the status
+ line.
+
+
+ 
+ 
+ 
+              Edit ASCII Box Colors
+ 
+ Edit the color set for the ASCII box.
+
+
+
+ 
+ 
+ 
+              Edit Default View Colors
+ 
+ Edit the default view color sets. Each
+ time a new view is created, it will
+ inherit one of these color sets.
+
+ 
+ 
+ 
+              Copy Default Color Set
+ 
+ Copy one of the default color sets
+ to the active view.
+
+
+ 
+ 
+ 
+              ColorSet Help
+ 
+Select a color to change or select
+Restore to return the color set
+to its original colors.
+
+Each menu selection corresponds to
+one of the colors displayed in the
+window to the right of the menu.
+ 
+ 
+ 
+              ColorBox Help
+ 
+ All possible color combinations are
+ displayed in the ColorBox. The hexadecimal
+ equivalent for each color is displayed in
+ the color that it represents.
+
+ Use the cursor keys, Home, \bEnd\n, \bPgUp\n,
+ or PgDn to move the arrows to the desired
+ color. Press Enter to accept it or press
+ ESC to abort.
+ 
+ 
+ 
+              ColorBox Help
+ 
+ Two arrows surround the color to be selected.
+ The flashing arrow points to which hexadecimal
+ digit can be entered from the keyboard. For
+ example, if the flashing arrow points to the
+ high digit, then typing a hex digit will move
+ the arrows to the color with that digit in the
+ high position. The flashing arrow will then
+ point to the low digit. Typing a hex digit now
+ will move the arrows to the color that ends
+ with that digit.
+ 
+ 
+ 
+              Editor Defaults Menu
+ 
+This menu controls the editor defaults
+as well as the view defaults that are
+inherited by each view.
+
+These are the view defaults:
+INSERT_MODE:
+  Toggles insert mode on/off.
+AUTO-INDENT:
+  Toggles auto-indenting on/off.
+USE TABS:
+  Toggles tabs on/off.
+TAB SIZE:
+  Change tab width.
+
+
+ 
+ 
+ 
+              Editor Defaults
+ 
+EXPAND TABS:
+  Expand tabs to spaces while loading,
+  do nothing with tabs if set to NO.
+COMPRESS TABS:
+  Compress spaces to tabs while saving,
+  do nothing with tabs if set to NO.
+WRITE EOF:
+  Toggles writing of end-of-file marker.
+BACKUP FILES:
+  Toggles Auto-backups on/off.
+SAFE SAVE:
+  Toggle "save save" on/off.
+DEFAULT EXTENSION:
+  Change default file extension.
+PRINTER FILE:
+  Filename of printer device.
+VIEW_PAGEMODE:
+  PageUp/PageDn can either move to
+  top/bottom of screen, or new page.
+NUMLOCK_SETTING:
+  You can automatically have NumLock
+  on or off when you start KEd.
+QUOTE_PREFIX:
+  You can choose up to 3 characters
+  to prefix to each line when pasting
+  a block. This may be useful when
+  replying to a message, and you are
+  quoting the original text.
+ 
+ 
+ 
+              Insert Mode
+ 
+Toggles insert mode on/off. If insert
+mode is off, then overwrite mode is on.
+
+
+
+ 
+ 
+ 
+              Auto-indent Mode
+ 
+Toggles auto-indenting on/off. When auto-
+ident is on and Enter is pressed, the
+cursor is positioned under the first non-
+blank character of the above line.
+
+ 
+ 
+ 
+              Use Tabs
+ 
+If toggled on, then pressing TAB will insert enough
+spaces to move the cursor to the next tab stop, which
+is a multiple of the tab width in TAB SIZE.
+If tabs are off, then pressing the tab key will align
+the cursor with the next word in the line above.
+
+ 
+ 
+ 
+              Tab Size
+ 
+The tab size is the number of spaces
+between each tab stop. The tab size is
+ignored if USE TABS is turned off.
+
+
+ 
+ 
+ 
+              Expand Tabs
+ 
+If toggled on, then files will be loaded
+with tab characters expanded into spaces.
+If off, then tab chars will show in the
+file unexpanded.
+
+
+ 
+ 
+ 
+              Compress Tabs
+ 
+If toggled on, then files will be saved
+with spaces compressed into tabs. If off,
+the file is saved with no tabs. 
+
+
+ 
+ 
+ 
+              Write EOF Marker
+ 
+If toggled on, then all files will be
+saved with an EOF (end-of-file) character
+appended to the end of the file.
+
+
+ 
+ 
+ 
+              Backup Files
+ 
+Before saving a file, the editor checks to see if a
+file with the same name already exists. If it does,
+then it is copied or renamed to the backup directory
+(or file spec).
+
+ 
+ 
+ 
+              Safe Save
+ 
+The purpose of the safe save is to ensure that
+files are not lost when an error occurs while
+writing over an original copy.  The safe save
+routine first writes the file to a temporary
+filename.  If successful, the file is then
+written to the original filename.
+
+ 
+ 
+ 
+              Default Extension
+ 
+This extension is assumed whenever the
+file extension is left off of a filename.
+
+ 
+ 
+ 
+              Printer File
+ 
+All printer output is directed to this file.
+It should normally be PRN, LPT1, COM1, etc.
+Enter a disk filename here if you want to
+redirect all printer output to a file.
+
+ 
+ 
+ 
+              Printer Setup String
+ 
+Enter a SETUP string for your printer.
+To enter a non-printable character, you
+may find it helpful to popup the ASCII
+box (Alt-A), to insert the characters.
+
+ 
+ 
+ 
+              View PageMode
+ 
+The editor has 2 versions of the PageUp
+and PageDown functions. OFF means move
+to top or bottom of screen. ON means move
+to the same screen line on next page.
+
+ 
+ 
+ 
+              Numlock Mode
+ 
+You can save your choice of Numlock mode
+and automatically have Numlock ON or OFF
+when you first start the editor.
+
+ 
+ 
+ 
+              Block Paste Prefix
+ 
+You can choose up to 3 characters to
+prefix each line when you Paste a block
+of lines. This can be useful if you want
+to reply to a mail message and Quote the
+original text.
+
+ 
+ 
+ 
+              Active View Settings
+ 
+These settings affect only the active viewer:
+
+INSERT_MODE:
+  Toggle insert mode on/off.
+AUTO-INDENT:
+  Toggle auto-indenting on/off.
+USE TABS:
+  Toggle tabs on/off.
+TAB SIZE:
+  Change tab width.
+ 
+ 
+ 
+              Insert Mode
+ 
+Toggles insert mode on/off. If insert
+mode is off, then overwrite mode is on.
+
+ 
+ 
+ 
+              Indent Mode
+ 
+Toggles auto-indenting on/off. When auto-
+ident is on and Enter is pressed, the
+cursor is positioned under the first non-
+blank character of the above line.
+
+ 
+ 
+ 
+              Tab Mode
+ 
+If toggled on, pressing TAB will insert enough
+spaces to move the cursor to the next tab stop
+as specified by TAB SIZE. If off, then a tab
+will align the cursor with the next word in the
+line above the current line.
+
+ 
+ 
+ 
+              Tab Size
+ 
+The tab size is the number of spaces between
+each tab stop. The tab size is ignored if
+USE TABS is turned off.
+
+ 
+ 
+ 
+              Path Menu
+ 
+BACKUP FILE SPEC:
+  Filename for auto-backups.
+TEMPORARY FILE SPEC:
+  Temporary filename. Used during "save save"
+  mode.
+HELP PATH:
+  Filename of help file.
+ 
+ 
+ 
+              Backup File Spec
+ 
+ When auto-backup mode is on, files are
+ backed-up to this filename. The filename
+ may be a directory or may contain a mask
+ to change the filename. For example,
+ C:\BACKUP\*.* will place all backup files
+ in the BACKUP directory on drive C, and
+ *.BAK will give all backups a .BAK
+ extension.
+
+ 
+ 
+ 
+              Temporary File Spec
+ 
+ When "safe save" mode is on, this filename
+ determines where to put the temporary files.
+ It may be a directory or it may contain a
+ mask to change the filename. For example,
+ C:\TEMP\*.* places temporary files in the
+
+ 
+ 
+ 
+              Help Filename
+ 
+ This is the filename of the editor's help
+ file. If no settings file is loaded, it
+ defaults to the same directory and name as
+ the editor but with a .HLP extension instead.
+
+ 
+ 
+ 
+              Search/Replace Menu
+ 
+SEARCH:
+  Search for a string of characters.
+REPLACE:
+  Search for a string of characters and replace
+  it with another.
+NEXT:
+  Search for the next occurance of the search
+  string.
+PREVIOUS:
+  Search backwards for the previous occurance
+  of the search string.
+
+
+ 
+ 
+ 
+              Search/Replace Options:
+ 
+DIRECTION:
+  Default search direction.
+CASE SENSITIVE:
+  This determines whether or not upper and
+  lowercase characters are considered the same.
+MATCH WORDS ONLY:
+  Search for whole words only.
+QUERY REPLACE:
+  Request permission before replacments.
+ 
+ 
+ 
+              Search
+ 
+ Enter a string to search for in the file. The
+ search starts at the cursor and continues in
+ the default direction. The cursor will be
+ positioned over the first character of the
+ string found.
+
+ 
+ 
+ 
+              Replace
+ 
+ Enter both a string to search for and a string
+ to replace it with. The search starts at the
+ cursor position and continues in the default
+ direction. Occurances of the search string are
+ replaced with the replace string.
+
+ 
+ 
+ 
+              Find Next
+ 
+ Search for the next occurance of the
+ search string, starting at one column
+ to the right of the cursor.
+
+ 
+ 
+ 
+              Find Previous
+ 
+ Search for a previous occurance of
+ search string, starting at one column
+ to the left of the cursor.
+
+ 
+ 
+ 
+              Search Direction
+ 
+ This is the default direction for
+ searching. It is ignored by the
+ search next/previous functions.
+
+ 
+ 
+ 
+              Case Sensitivity
+ 
+ Determines whether or not upper- and
+ and lowercase characters are dis-
+ tinguished from each while searching.
+ If set to YES, then they are dis-
+ tinguised from each other.
+
+ 
+ 
+ 
+              Match Words Only
+ 
+ If matching words only, then strings
+ can only be found if they are surround-
+ ed by non-word characters, ie. spaces
+ or punctuation.
+
+ 
+ 
+ 
+              Query Replace
+ 
+ If query replace is enabled, then
+ a dialog box will pop-up and ask
+ permission before any replacements
+ are made.
+
+ 
+ 
+ 
+              Verify Replace Help
+ 
+ Press:
+  Y  to replace this occurance and proceed.
+  N  to skip this occurance and proceed with search.
+  O  to replace this occuance and stop searching.
+  A  to replace all occurances without asking for
+         permission to replace.
+ ESC to abort search.
+ 
+ 
+ 
+              MultiFile Search Help
+ 
+ NEXT   Continue search with next file.
+ SKIP   Skip next file described in box and
+              continue with the search.
+ KEEP   Don't close the window containing the
+              file just searched.
+ CANCEL to cancel the search.
+ 
+ 
+ 
+              Dirlist Help
+ 
+  Use arrow keys, Home, \bEnd\n, \bPgUp\n, and
+PgDn to select filename. Press \bEnter\n
+to accept filename.
+
+   F3 - Sort menu
+   F4 - Attributes menu
+   BS - Parent directory (backspace)
+  TAB - Edit path
+Enter - Accept filename
+ 
+ 
+ 
+              Sort Menu
+ 
+ NAME
+  Sort filelist by filename.
+ EXTENSION
+  Sort filelist by filename extension
+  then by actual filename.
+ DATE
+  Sort filelist by dates from earliest
+  to latest.
+ SIZE
+  Sort filelist by file sizes from
+  smallest to largest.
+ REVERSE ON/OFF
+  Reverse the order of sorting. For
+  example, a size sort would sort from
+  largest file to smallest file.
+ 
+ 
+ 
+              Attribute Filter
+ 
+ If any of these flags are set to off,
+ then any file that has that bit set
+ will not be displayed.
+
+ READ-ONLY ON/OFF
+  Show all files that have the read-only
+  bit (r) set.
+ ARCHIVED ON/OFF
+  Show all files that have not been
+  archived (a).
+ SYSTEM ON/OFF
+  Show all system files (s).
+ HIDDEN ON/OFF
+  Show all hidden files (h).
+Enter new pathname for directory listing.
+Use wildcards in basename to constrain
+list to certain filenames and extenstions.
+    Example:  C:\EDIT\DOCS\*.TXT
+ 
+ 
+ 
+              ASCIIBox Help
+ 
+Use the cursor keys to move cursor
+around character set.
+
+Press:
+ c to insert character under cursor
+    into file.
+ d to insert decimal equivalent.
+ H to insert hex equivalent with
+    letters in uppercase (ex: F9)
+ h to insert hex equivalent with
+    letters in lowercase (ex: f9)
+
+Pressing Enter will insert the
+value into the file based on the last
+mode used.
+ 
+ 
+ 
+              Print Menu
+ 
+PRINT FILE:
+  Print file in active view
+PRINT BLOCK:
+  Print block in active view
+PRINT SCRAP:
+  Print contents of scrap buffer
+LINEFEED:
+  Advance paper one line
+FORMFEED:
+  Advance paper to the next page
+ 
+ 
+ 
+              Print File
+ 
+Dump the file in the active view to
+the printer.
+
+ 
+ 
+ 
+              Print Block
+ 
+Print the currently defined block
+in the active view to the printer.
+
+ 
+ 
+ 
+              Print Scrap
+ 
+Print the contents of the global scrap
+buffer to the printer.
+
+ 
+ 
+ 
+              Print Linefeed
+ 
+Issue a linefeed command to the printer
+to advance the printer paper by one line.
+
+ 
+ 
+ 
+              Print Formfeed
+ 
+Send a formfeed command to the printer
+to advance the paper to the next page.
+
+ 
+ 
+ 
+              ViewPick Help
+ 
+This picklist displays a list of
+existing views. Duplicates have
+a number followed by a bullet()
+in front of the entry.
+
+Use the cursor keys to move the
+highlighting bar over a view's
+filename and press Enter to
+bring that view to the front and
+make it active.
+Enter the name of the file to load.
+Use the OS2 wildcard characters
+(* and ?) to bring up a directory
+listing.
+Type in the name of the file to save.
+Use OS2 wildcard characters (* and ?)
+to alter the filename that is used.
+Type in a string of characters to
+be searched for
+Type text to replace what will
+be found by the search.
+Enter a mask using OS2 wildcards
+to select files to be tagged or
+untagged. For example, *.C will
+tag/untag all files with a .C
+extension.
+When auto-backup mode is on, files are
+backed-up to this filename. The filename
+may be a directory or may contain a mask
+to change the filename. For example,
+C:\BACKUP\*.* will place all backup files
+in the BACKUP directory on drive C, and
+*.BAK will give all backups a .BAK
+extension.
+
+This is the file spec for the
+backup files. Use wildcards to
+modify the actual filename used.
+When "safe save" mode is on, this filename
+determines where to put the temporary files.
+It may be a directory or it may contain a
+mask to change the filename. For example,
+C:\TEMP\*.* places temporary files in the
+
+When auto-backup mode is on, files are
+backed-up to this filename. The filename
+may be a directory or may contain a mask
+to change the filename. For example,
+C:\BACKUP\*.* will place all backup files
+in the BACKUP directory on drive C, and
+*.BAK will give all backups a .BAK
+extension.
+
+This is the default filename extension.
+It will be appended to any filename
+with no extension. For example, if the
+extension is set to "TXT", then "MAIN"
+will become "MAIN.TXT"
+This is the filename for printer output. It is
+normally a printer (PRN, LPT1, COM1, etc.), but
+may be a file if you want to redirect printer
+output to it.
+Enter a name for the new directory. Names
+are limited to 8 characters and an optional
+3 character extension.
+Enter the number of spaces to shift the
+block to the right.  Enter a negative
+number to shift left.
+ 
+ 
+ 
+              Shell Menu
+ 
+COMMAND:
+  Enter OS2 command
+RUN!:
+  Execute OS2 command
+SCREEN:
+  Show OS2 screen while executing
+LOAD LOG:
+  Load log file when command finished
+FILE SAVE:
+  Save file in active view before
+  executing OS2 command
+ALL SAVE:
+  Save all files before executing
+  OS2 command
+ 
+ 
+ 
+              Command
+ 
+  Enter a OS2 command to be executed when
+Shift-F3 is pressed or Run! is selected
+from the shell menu.  Before the command
+is executed, all occurances of %n will be
+replaced with the name of the active view.
+  If you want the output from the OS2
+command to be loaded into the editor,
+redirect the command's output to LOG.TXT
+("cc %n >log.txt", for example) and set the
+Load log menu item to yes.
+
+ 
+ 
+ 
+              Execute OS2 Command
+ 
+Execute a OS2 command.  Select the menu item
+labeled Command in the shell menu to enter
+the OS2 command that will be executed.
+
+ 
+ 
+ 
+              Screen
+ 
+Determines whether or not the OS2 screen
+is displayed while the OS2 command is being
+executed.
+
+ 
+ 
+ 
+              Load log
+ 
+Determines whether the file named LOG.TXT
+is loaded and displayed after a OS2 command
+
+item to find out how to redirect output to
+LOG.TXT.
+
+ 
+ 
+ 
+              File save
+ 
+Determines whether or not the file in
+the active view will be saved before
+the OS2 command is executed.
+
+ 
+ 
+ 
+              All save
+ 
+Determines whether or not all files
+loaded into the editor will be saved
+before the OS2 command is executed.
+
+
+ 
+ 
+ 
+              About the Editor
+ 
+                The Kudzu Editor (KEd)   OS/2 Version 2.15
+                   (C) 1992, 1993, 1994 by Kudzu Software
+                         Kudzu Software
+                    1452 North Ave Atlanta, GA 30307
+                      Compuserve ID:76254,764
+
+The Kudzu Editor is a general purpose text editor that is of 
+particular use to programmers. An ASCII chart, a keystroke 
+recorder/player, an OS/2 shell, configurable settings,
+comprehensive block capabilities, and strong search/replace
+
+
+Planned enhancements are keyboard remapping, a callable macro 
+facility, word wrap, and better integration with compilers. 
+
+PLEASE REGISTER SHAREWARE!
+
+If you like the editor, we'd love to hear from you! 
+ 
+ 
+ 
+              Help on Help
+ 
+    Use the arrow keys to move the selection
+ bar to highlighted items. Press Home to
+ jump to the first item on the screen; \bEnd
+ to jump to the last. Jump to related text
+ on a highlighted item by pressing Enter. To
+ backtrack through previous screens, press
+ the Backspace key.
+
+    Press PgUp and \bPgDn\n to flip through
+ through the pages. The page number is listed
+ in the upper right corner of the help window
+ followed by the total number of pages on the
+ topic. 
+
+    Move the help window by using the ALT-
+ 

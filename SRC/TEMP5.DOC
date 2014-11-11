@@ -1,0 +1,41 @@
+inchar key state = 80 combined = 266c key hi = & key lo = l
+inchar key state = 80 combined = 2064 key hi =   key lo = d
+inchar key state = 80 combined = 1c0d key hi =  key lo = 
+
+search.cpp do_replace 
+inchar key state = 80 combined = 1579 key hi =  key lo = y
+sheet_addstr string = °vmem_old°
+sheet_addstr string = °vmem_old°
+addstr in middle
+original str = ±47      struct view_rec *v= (struct view_rec *)Mem::vmem_trans (active_view);° h->length= 77
+addstr after memcpy new str = ±47      struct view_rec *v= (struct view_rec *)Mem::vmem_oldvmem_trans (active_view);°  h->length= 85
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 1 col 53
+view_flush sheet line = 1 v_flush w_row = 2 line =°47      struct view_rec *v= (struct view_rec *)Mem::vm_trans (active_view);°
+search.cpp do_replace 
+inchar key state = 80 combined = 1579 key hi =  key lo = y
+sheet_addstr string = °vmem_old°
+sheet_addstr string = °vmem_old°
+addstr in middle
+original str = ±50      line_hdr= (struct line_header *)Mem::vmem_trans (get_line (m->row));° h->length= 76
+addstr after memcpy new str = ±50      line_hdr= (struct line_header *)Mem::vmem_oldvmem_trans (get_line (m->row));°  h->length= 84
+search.cpp do_replace  sheet_delchar
+sheet_delchar row 2 col 46

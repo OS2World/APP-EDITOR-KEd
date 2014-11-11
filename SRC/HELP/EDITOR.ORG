@@ -1,0 +1,1698 @@
+$ LOCUS EDITOR 1
+$ LOCUS FILE_MENU 2
+$ LOCUS BLOCK_MENU 3
+$ LOCUS WINDOW_SIZE 4
+$ LOCUS SETTINGS_HELP 5
+$ LOCUS SEARCH_HELP 6
+$ LOCUS DIRLIST_HELP 7
+$ LOCUS ASCII_HELP 8
+$ LOCUS PRINT_HELP 9
+$$ LOCUS FILELIST_HELP 10
+$ LOCUS PICKLIST_HELP 11
+$ LOCUS DIALOG_HELP 12
+$ LOCUS SHELL_HELP 13
+$ LOCUS ABOUT_EDIT 14
+$ LOCUS WINDOW_MOVE 15
+$ LOCUS HELP_ON_HELP 255
+$
+$$ **************************
+$$ **                      **
+$$ **     EDITOR HELP      **
+$$ **                      **
+$$ **************************
+$ DEFSIZE 46 18
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN EDITOR 1
+$ TITLE "Editor Help"
+     ÕÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+     ³       \bKudzu Editor\n              ³
+     ³ Copyright 1993,4 Kudzu Software ³
+     ³                                 ³
+     ³ Kudzu Software                  ³
+     ³ 1452 North Ave NE               ³
+     ³ Atlanta, GA 30307               ³
+     ³                                 ³
+     ³ Compuserve ID:76254,764         ³
+     ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+
+     Help is available on these topics:
+
+            [EDITOR_FCTNKEYS|Function Keys]
+            [EDITOR_KEYS|Keyboard Commands]
+            [STATUS_LINE|The Status Line]
+            [CMDLINE_OPTIONS|Command Line Options]
+            [EDIT_TEXT|About the Editor]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL STATUS_LINE
+$ SCREEN EDITOR 2
+$ TITLE "The Status Line"
+    The following characters are displayed
+ on the status line to indicate various
+ modes as well as the cursor row and column.
+    R  Recording keyboard macro
+    ±  STREAM  block mode
+    ğ  LINES   block mode
+    ş  COLUMNS block mode
+      Auto-indent ON
+    ë  File changed
+    R  Row number
+    C  Column number
+  I/O  Insert/Overwrite mode
+
+  If the active view is a duplicate, then the
+duplicate number followed by a bullet () will
+be displayed before the filename.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL EDITOR_FCTNKEYS
+$ SCREEN EDITOR 3
+$ SIZE 30 17
+$  TITLE "Function Keys"
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³F1          ³F2           ³
+ ³[HELP_ON_HELP|Help]        ³[PRINT_MENU|Print menu]   ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³F3          ³F4           ³
+ ³[FILE_MENU|File menu]   ³[SETTINGS_MENU|Settings menu]³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³F5   Mark   ³F6   Mark    ³
+ ³[BLOCK_MARKSTART|Block start] ³[BLOCK_MARKEND|Block end]    ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³F7          ³F8           ³
+ ³[BLOCK_MENU|Block menu]  ³[SEARCH_MENU|Search menu]  ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³F9          ³F10          ³
+ ³            ³[PICKLIST_HELP|File List]    ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+  See shifted keys on page 2
+$ PAGE
+$ TITLE "Shifted Function Keys"
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³Shift-F1    ³Shift-F2     ³
+ ³            ³[OS2SHELL_HELP|OS2 Shell]    ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³Shift-F3    ³Shift-F4     ³
+ ³[RUN_DOSCOMMAND|OS2 Command] ³[SHELL_MENU|Shell menu]   ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³Shift-F5    ³Shift-F6     ³
+ ³[BLOCK_JUMPSTART|Jump start]  ³[BLOCK_JUMPEND|Jump end]     ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³Shift-F7    ³Shift-F8     ³
+ ³[KEYMAC_HELP|Record macro]³             ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³Shift-F9    ³Shift-F10    ³
+ ³            ³             ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+$$
+$ LABEL EDITOR_KEYS
+$ SCREEN EDITOR 4
+$  TITLE "Cursor Commands"
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Cursor left            Left arrow
+ Cursor right           Right arrow
+ Cursor up              Up arrow
+ Cursor down            Down arrow
+ Beginning of line      Home
+ End of line            End
+ Word left              Ctrl-Left arrow
+ Word right             Ctrl-Right arrow
+ Scroll up              Ctrl-Q
+ Scroll down            Ctrl-Z
+ Page up                PgUp
+ Page down              PgDn
+ Beginning of file      Ctrl-PgUp
+ End of file            Ctrl-PgDn
+$ PAGE
+$ TITLE "Insert/Delete Commands"
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Insert/Overwrite mode  Ins
+ Insert line            Enter
+ Delete line            Ctrl-Y
+ Delete to end          Ctrl-E
+ Delete to beginning    Ctrl-B
+ Delete word left       Ctrl-R
+ Delete word right      Ctrl-T
+ Delete character left  Backspace
+ Delete character       Del
+
+$ PAGE
+$ TITLE "Window Commands"
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Next window            Alt-N
+ Previous window        Alt-M
+ Window Size mode       Ctrl-W
+ Window Move mode       Alt-W
+$$ Bring window to front  Alt-B
+
+               \bMacro Commands\n
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Macro record start     Shift-F7
+ Macro record end       Alt-F7
+ Macro replay           Alt-F7
+
+$ PAGE
+$ TITLE "File Commands"
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ File Menu              Alt-F
+ Save active file       Alt-S
+ Quit active file       Alt-Q
+ Exit KEd               Alt-X
+
+$ PAGE
+$ TITLE "Miscellaneous Commands"
+ Function               Key
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Goto line              Alt-G
+ Find Next occurance    Ctrl-N
+ Find preVious          Ctrl-V
+ Display OS2 screen     Alt-D
+ Pop-up the ASCII box   Alt-A
+ Time and date stamp    Alt-T
+ Display editor version Alt-V
+ Insert key code        Alt-K
+$$ Insert key name        Alt-J
+ Quick paste            Alt-P
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL OS2SHELL_HELP
+$ SCREEN EDITOR 5
+$ SIZE 50 5
+$ TITLE "OS2 Shell"
+Temporarily leaves the editor and loads a copy of
+the OS2 command processor.  The shell allows you
+to execute OS2 commands without having to quit the
+editor first.  Issue an \bEXIT\n command at the OS/2
+prompt to return to the editor.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL KEYMAC_HELP
+$ SCREEN EDITOR 6
+$ SIZE 50 6
+$ TITLE "Keyboard Macro"
+Press \bShift-F7\n to begin recording a keyboard
+macro. \bR\n will appear on the left of the status
+line to indicate macro recording in process.
+Press \bAlt-F7\n to end the macro.
+
+To playback the macro, press \bAlt-F7\n.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL CMDLINE_OPTIONS
+$ SCREEN EDITOR 3
+$ SIZE 62 15
+$ TITLE "Command Line Options"
+The editor can be configured using command line options,
+and files can loaded and positioned from the command line.
+Options can be placed in environment variables and are
+automatically added to the command line each time the
+editor is run.
+
+ \b&<name>\n      Include an environment string
+ \b#<number>\n    Position cursor to a line
+ \b<filename>\n   Load a file
+ \b$<filename>\n  Load a file whose name starts with a '@', etc.
+$$ \b-r<number>\n   Set number of display rows
+$$ \b-c<number>\n   Set number of display columns
+$$ \b-M<number>\n   Set video mode
+ \b-G<filename>\n Load settings file if not KED.INI
+$$ \b-g<filename>\n Load settings file if one is not already loaded
+$$ \b-P<filename>\n Set program name
+$ PAGE
+$ TITLE "Command Line Options"
+The environment string \bEDITOR\n is prepended to the command
+line, so startup options can be placed in it.  The &<name>
+option will include the contents of the named variable at
+that point, so you can refer to other strings filled with
+options.
+
+You can load multiple files and even position the cursor in
+each file, with a command such as
+
+   EDIT readme.doc #12 foo util.doc test.cpp #10
+
+This will load readme.doc, foo, util.doc, and test.cpp, and
+position the cursors in two of the files.
+$$ PAGE
+$$ TITLE "The -P (Program name) Option"
+$$The -P option is needed for versions of DOS prior to 3.0,
+$$where the full name of the program is not available to the
+$$program.  It is also needed for goofy compilers like Latice
+$$6.01 that strips the path from argv\[0].  The argument is an
+$$override to the value in argv\[0] which is used by the editor
+$$to know the name an directory of its own EXE.  The only thing
+$$that uses it now is the help file name, which is taken as the
+$$same name as the EXE with an HLP extension.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **      File Menu       **
+$$ **************************
+$ LABEL FILE_MENU
+$ SCREEN FILE_MENU 1
+$  SIZE 33 14
+$  TITLE "File Menu"
+[FILE_LOAD|LOAD]:
+  Load file into active view
+[FILE_OPEN|OPEN]:
+  Load file into new view
+[FILE_SAVE|SAVE]:
+  Save file in active view
+[FILE_SAVE|SAVE_AS]:
+  Change name and save file
+[FILE_NEW|NEW WINDOW]:
+  Create a new view
+[FILE_DUPLICATE|DUPLICATE]:
+  Open a new view into same file
+[FILE_CLOSE|CLOSE]:
+  Close the active view
+[FILE_QUIT|QUIT]:
+  Quit editing session
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$
+$ DEFSIZE 40 5
+$
+$ LABEL FILE_LOAD
+$ SCREEN FILE_MENU 2
+$ TITLE "Load"
+ Loads a file into the active view.
+ Type in the name of the file to load
+ or use OS2 wildcard characters (* and
+ ?) to get a directory listing.
+                         See [FILE_MENU|file menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL FILE_OPEN
+$ SCREEN FILE_MENU 3
+$ TITLE "Open"
+ Creates a new window and requests the
+ name of a file to load into it.  Use
+ OS2 wildcard characters (* and ?) to
+ get a directory listing.
+                         See [FILE_MENU|file menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL FILE_SAVE
+$ SCREEN FILE_MENU 4
+$ TITLE "Save"
+ Unconditionally writes the current
+ file in the active view to disk.
+
+                         See [FILE_MENU|file menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL FILE_SAVE_AS
+$ SCREEN FILE_MENU 5
+$ TITLE "Save As"
+ Writes a file to disk.  Type in a
+ filename or press \bEnter\n to accept the
+ default name.
+                         See [FILE_MENU|file menu]
+
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL FILE_NEW
+$ SCREEN FILE_MENU 6
+$ TITLE "New"
+ Creates a new window with no file
+ loaded.  To load a file into the
+ window, use the [FILE_LOAD|Load] command.
+
+                         See [FILE_MENU|file menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL FILE_DUPLICATE
+$ SCREEN FILE_MENU 7
+$ TITLE "Duplicate"
+ Creates a duplicate view of the active
+ view.  This can be used to look at one
+ or more different parts of the file
+ simultaneously.
+                         See [FILE_MENU|file menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL FILE_CLOSE
+$ SCREEN FILE_MENU 8
+$ TITLE "Close"
+ Closes the active view.  If the file
+ in the view has been changed, then you
+ will be asked to save it, discard your
+ changes, or cancel.
+                         See [FILE_MENU|file menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL FILE_QUIT
+$ SIZE 40 6
+$ SCREEN FILE_MENU 9
+$ TITLE "Quit"
+ Exits the editor. If any files have
+ been changed, you will be asked if you
+ want to save or disard each one. If
+ a resume file is being used, then it
+ will be packed-up before exiting.
+                         See [FILE_MENU|file menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **     Block Menu       **
+$$ **************************
+$ LABEL BLOCK_MENU
+$ SCREEN BLOCK_MENU 1
+$  TITLE "Block Menu"
+$  SIZE 35 20
+[BLOCK_COPY|COPY]:
+  Copy block into scrap buffer
+[BLOCK_DELETE|DELETE]:
+  Copy block then zap it
+[BLOCK_PASTE|PASTE]:
+  Paste scrap buffer at cursor
+[BLOCK_ZAP|ZAP]:
+  Erases text in current block
+[BLOCK_QUOTE|QUOTE]:
+  Prefix paste lines with chars
+[BLOCK_ADJUST|ADJUST]:
+  Adjust block left or right
+[BLOCK_MODE|MODE]:
+  Change block selection mode
+[BLOCK_VIEW|VIEW]:
+  Open view into the scrap buffer
+[BLOCK_READ|READ]:
+  Read block from disk
+[BLOCK_WRITE|WRITE]:
+  Write block to disk
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$
+$ DEFSIZE 40 5
+$
+$ LABEL BLOCK_COPY
+$ SCREEN BLOCK_MENU 2
+$ TITLE "Copy Block"
+ Copies the active block into the
+ scrap buffer.  The previous contents
+ of the scrap buffer are lost.
+
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_DELETE
+$ SCREEN BLOCK_MENU 3
+$ TITLE "Delete Block"
+ Copies the active block into the scrap
+ buffer and then deletes the block from
+ memory.  The previous contents of the
+ scrap buffer are lost.
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_PASTE
+$ SCREEN BLOCK_MENU 4
+$ TITLE "Paste Block"
+ Inserts the contents of the scrap
+ buffer into the active view starting
+ at the cursor position. The scrap
+ buufer remains intact.
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_ZAP
+$ SCREEN BLOCK_MENU 5
+$ TITLE "Zap Block"
+ Deletes the text in the active block.
+ The scrap buffer is unaffected.
+
+
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_QUOTE
+$ SCREEN BLOCK_MENU 6
+$ TITLE "Quote Block"
+ Paste the current buffer into current
+ file and prefixes each line with a
+ user-definable string
+
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_ADJUST
+$ SCREEN BLOCK_MENU 7
+$ TITLE "Adjust Block"
+ Shifts the active block left or right.
+ Enter a negative number at the prompt
+ to shift the block left instead of
+ right.
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_MODE
+$ SCREEN BLOCK_MENU 8
+$ SIZE 40 19
+$ TITLE "Change Block Mode"
+ Changes the block selection mode to
+ one of the following three:
+ 
+ \bSTREAM\n
+   All characters between the beginning
+   and ending marks are selected.
+
+ \bLINE\n
+   All lines from the beginning mark to
+   the line above the ending mark are
+   selected.
+
+ \bCOLUMN\n
+   A rectangular portion of text with
+   the starting mark as the upper left
+   corner and the ending mark as the
+   lower right right corner is selected
+
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_VIEW
+$ SCREEN BLOCK_MENU 9
+$ TITLE "View Scrap"
+ Opens a view window into the current
+ scrap buffer.  Any changes to the view
+ will affect the contents of the scrap
+ buffer.
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_READ
+$ SCREEN BLOCK_MENU 10
+$ SIZE 40 6
+$ TITLE "Read Block"
+ Inserts text from a disk file into the
+ view starting at the cursor location.
+ Enter the name of the file to insert
+ or use OS2 wildcard characters to get
+ a directory listing.
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_WRITE
+$ SCREEN BLOCK_MENU 11
+$ TITLE "Write Block"
+ Writes the active block to disk. If
+ If no block is active, then the scrap
+ buffer is written instead.
+
+                        See [BLOCK_MENU|block menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL BLOCK_MARKSTART
+$ SCREEN BLOCK_MENU 100
+$ SIZE 42 6
+$ TITLE "Mark Start"
+ Marks the cursor position as the start
+ position for the block. If the end mark
+ is in a legal position for the current
+ [BLOCK_MODE|block mode], then the block will become
+ active.
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_MARKEND
+$ SCREEN BLOCK_MENU 101
+$ SIZE 39 6
+$ TITLE "Mark End"
+ Marks the cursor position as the end
+ position for the block. If the start
+ mark is already in a legal position
+ for the current block mode, then the
+ block will become active.
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_JUMPSTART
+$ SCREEN BLOCK_MENU 102
+$ SIZE 40 5
+$ TITLE "Jump to Start"
+ Provided that the [BLOCK_MARKSTART|block start] marker
+ has been previously set, the cursor
+ will jump to the beginning of the
+ block.
+                        See [BLOCK_MENU|block menu]
+$ LABEL BLOCK_JUMPEND
+$ SCREEN BLOCK_MENU 103
+$ SIZE 40 5
+$ TITLE "Jump to End"
+ Provided that the [BLOCK_MARKEND|block end] marker has
+ been previously set, the cursor will
+ jump to the ending of the block.
+
+                        See [BLOCK_MENU|block menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **      Window_Size     **
+$$ **************************
+$ LABEL WINDOW_SIZE
+$ SCREEN WINDOW_SIZE 1
+$  SIZE 46 14
+$  TITLE "Window Size Help"
+
+You are in "window size" mode. Press an arrow
+key to move the lower right corner of the 
+window and make it larger or smaller. The 
+upper left corner is "anchored", and will
+not move. You will notice that the cursor
+has disappeared because you cannot edit text
+until you exit this mode.
+
+ Use the arrow keys to size the window.
+
+ Press the ESC key to exit window size mode.
+                        See [WINDOW_MOVE|window move]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **      Window_Move     **
+$$ **************************
+$ LABEL WINDOW_MOVE
+$ SCREEN WINDOW_MOVE 1
+$  SIZE 46 14
+$  TITLE "Move Help"
+
+You are in "window move" mode. Press an arrow
+key to move the window up and down or left
+and right. You can move the window entirely
+off screen, but there is really no way to
+easily redisplay it. You will notice that the 
+cursor has disappeared because you cannot 
+edit text until you exit this mode.
+
+ Use the arrow keys to move the window.
+
+ Press the ESC key to exit window move mode.
+                        See [WINDOW_SIZE|window size]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **    Settings Help     **
+$$ **************************
+$ LABEL SETTINGS_MENU
+$ SCREEN SETTINGS_HELP 1
+$  TITLE "Settings Menu"
+$  SIZE 25 12
+[SETTINGS_LOAD|LOAD]:
+   Load new settings
+[SETTINGS_SAVE|SAVE]:
+   Save current settings
+[SETTINGS_COLORS|COLORS]:
+   Modify editor colors
+[SETTINGS_EDITOR|EDITOR]:
+   Change editor defaults
+[SETTINGS_VIEW|VIEW]:
+   Change view defaults
+[SETTINGS_PATH|PATH]:
+   Change default paths
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$
+$ DEFSIZE 40 5
+$
+$ LABEL SETTINGS_LOAD
+$ SCREEN SETTINGS_HELP 2
+$ SIZE 40 6
+$ TITLE "Load Settings"
+ Loads a new settings file from disk.
+ Type in the name of the settings file
+ or use wildcards to get a directory
+ listing. The new settings will take
+ over immediately.
+                      See [SETTINGS_MENU|settings menu]
+$ LABEL SETTINGS_SAVE
+$ SCREEN SETTINGS_HELP 3
+$ TITLE "Save Settings"
+ Saves the current settings to disk.
+ Type in a name for the settings file
+ or use wildcards to alter the default
+ name.
+                      See [SETTINGS_MENU|settings menu]
+$ SCREEN SETTINGS_HELP 4
+$ TITLE "Edit Color Sets"
+ Modify the editor colors. You can
+ alter the color sets for any part of
+ the editor.
+
+                      See [SETTINGS_MENU|settings menu]
+$ SCREEN SETTINGS_HELP 5
+$ TITLE "Modify Editor Defaults"
+$ SIZE 40 6
+ Modify the default editor settings.
+ You may change editor defaults, such
+ as the default file extension and the
+ default view settings, to suit your
+ needs.
+                      See [SETTINGS_MENU|settings menu]
+$ SCREEN SETTINGS_HELP 6
+$ TITLE "Modify View Defaults"
+ Modify the active view's settings.
+ You can change the various parameters
+ for the active view, such as the auto-
+ indent mode and the tab settings.
+                      See [SETTINGS_MENU|settings menu]
+$ SCREEN SETTINGS_HELP 7
+$ TITLE "Change Default Pathnames"
+ Change the default path for the help
+ file as well as the paths for backup
+ files and temporary files.
+
+                      See [SETTINGS_MENU|settings menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SETTINGS_COLORS
+$ SCREEN SETTINGS_HELP 20
+$ TITLE "Color Set Menu"
+$ SIZE 44 12
+    Edit color set:
+
+[COLORSET_THISVIEW|THIS VIEW]      [COLORSET_MENU|MENU]
+[COLORSET_DIALOG|DIALOG]         [COLORSET_REDBOX|REDBOX]
+[COLORSET_FILELIST|FILELIST]       [COLORSET_STATUSLINE|STATUS LINE]
+[COLORSET_HELP|HELP]           [COLORSET_ASCIIBOX|ASCII BOX]
+
+[COLORSET_VIEWDEFAULTS|VIEW DEFAULTS]:
+  Edit the default view color sets
+[COLORSET_GETDEFAULT|GET DEFAULT]:
+  Copy a default colorset to the active view
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$
+$ DEFSIZE 40 4
+$
+$ LABEL COLORSET_THISVIEW
+$ SCREEN SETTINGS_HELP 21
+$ SIZE 40 5
+$ TITLE "Edit Active View Colors"
+ Edit the color set of the active view.
+ Only the active view's colors will be
+ affected; the default color sets will
+ not be changed.
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL COLORSET_DIALOG
+$ SCREEN SETTINGS_HELP 22
+$ TITLE "Edit Dialog Box Colors"
+ Edit the color set for all dialog
+ boxes.
+
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL COLORSET_FILELIST
+$ SCREEN SETTINGS_HELP 23
+$ TITLE "Edit Filelist Colors"
+ Edit the color set for the directory
+ list.
+
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL COLORSET_HELP
+$ SCREEN SETTINGS_HELP 24
+$ TITLE "Edit Help Colors" 
+ Edit the color set for the help
+ window.
+
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL COLORSET_MENU
+$ SCREEN SETTINGS_HELP 25
+$ TITLE "Edit Menu Colors"
+ Edit the color set for all menus.
+
+
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL COLORSET_REDBOX
+$ SCREEN SETTINGS_HELP 26
+$ TITLE "Edit Redbox Colors"
+ Edit the color set for the redbox
+ error message window.
+
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL COLORSET_STATUSLINE
+$ SCREEN SETTINGS_HELP 27
+$ TITLE "Edit Status Colors"
+ Edit the color set for the status
+ line.
+
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL COLORSET_ASCIIBOX
+$ SCREEN SETTINGS_HELP 28
+$ TITLE "Edit ASCII Box Colors"
+ Edit the color set for the ASCII box.
+
+
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL COLORSET_VIEWDEFAULTS
+$ SCREEN SETTINGS_HELP 30
+$ TITLE "Edit Default View Colors"
+ Edit the default view color sets. Each
+ time a new view is created, it will
+ inherit one of these color sets.
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL COLORSET_GETDEFAULT
+$ SCREEN SETTINGS_HELP 31
+$ TITLE "Copy Default Color Set"
+ Copy one of the default color sets
+ to the active view.
+
+                      See [SETTINGS_COLORS|colorset menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN SETTINGS_HELP 40
+$ TITLE "ColorSet Help"
+$ SIZE 36 7
+Select a color to change or select
+\bRestore\n to return the color set
+to its original colors.
+
+Each menu selection corresponds to
+one of the colors displayed in the
+window to the right of the menu.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN SETTINGS_HELP 60
+$ SIZE 49 10
+$ TITLE "ColorBox Help"
+ All possible color combinations are
+ displayed in the ColorBox. The hexadecimal
+ equivalent for each color is displayed in
+ the color that it represents.
+
+ Use the cursor keys, \bHome\n, \bEnd\n, \bPgUp\n,
+ or \bPgDn\n to move the arrows to the desired
+ color. Press \bEnter\n to accept it or press
+ \bESC\n to abort.
+$ PAGE
+$ TITLE "ColorBox Help"
+ Two arrows surround the color to be selected.
+ The flashing arrow points to which hexadecimal
+ digit can be entered from the keyboard. For
+ example, if the flashing arrow points to the
+ high digit, then typing a hex digit will move
+ the arrows to the color with that digit in the
+ high position. The flashing arrow will then
+ point to the low digit. Typing a hex digit now
+ will move the arrows to the color that ends
+ with that digit.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SETTINGS_EDITOR
+$ SCREEN SETTINGS_HELP 80
+$ SIZE 40 16
+$ TITLE "Editor Defaults Menu"
+This menu controls the editor defaults
+as well as the view defaults that are
+inherited by each view.
+
+\bThese are the view defaults:\n
+[EDITOR_INSERT|INSERT_MODE]:
+  Toggles insert mode on/off.
+[EDITOR_INDENT|AUTO-INDENT]:
+  Toggles auto-indenting on/off.
+[EDITOR_TABS|USE TABS]:
+  Toggles tabs on/off.
+[EDITOR_TABSIZE|TAB SIZE]:
+  Change tab width.
+
+See editor defaults on next page.
+$ PAGE
+$ TITLE "Editor Defaults"
+[EDITOR_EXPANDTABS|EXPAND TABS]:
+  Expand tabs to spaces while loading,
+  do nothing with tabs if set to NO.
+[EDITOR_COMPRESSTABS|COMPRESS TABS]:
+  Compress spaces to tabs while saving,
+  do nothing with tabs if set to NO.
+[EDITOR_WRITEEOF|WRITE EOF]:
+  Toggles writing of end-of-file marker.
+[EDITOR_BACKUP|BACKUP FILES]:
+  Toggles Auto-backups on/off.
+[EDITOR_SAFESAVE|SAFE SAVE]:
+  Toggle "save save" on/off.
+[EDITOR_DEFEXTENSION|DEFAULT EXTENSION]:
+  Change default file extension.
+[EDITOR_PRINTER|PRINTER FILE]:
+  Filename of printer device.
+[EDITOR_PAGEMODE|VIEW_PAGEMODE]:
+  PageUp/PageDn can either move to
+  top/bottom of screen, or new page.
+[EDITOR_NUMLOCK|NUMLOCK_SETTING]:
+  You can automatically have NumLock
+  on or off when you start KEd.
+[EDITOR_BLOCKQUOTE|QUOTE_PREFIX]:
+  You can choose up to 3 characters
+  to prefix to each line when pasting
+  a block. This may be useful when
+  replying to a message, and you are
+  quoting the original text.
+$$[EDITOR_WORDWRAP|WORD_WRAP_TOGGLE]:
+$$  You can choose to let KEd word wrap
+$$  the document. If you set this ON, then
+$$  you also need to set the Right Margin.
+$$[EDITOR_RIGHTMARGIN|RIGHT_MARGIN]:
+$$  Set the Right Margin if you use the
+$$  Word Wrap feature.If word wrap is OFF,
+$$  then this is ignored.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$
+$ DEFSIZE 42 5
+$ 
+$ LABEL EDITOR_INSERT
+$ SCREEN SETTINGS_HELP 81
+$ TITLE "Insert Mode"
+Toggles insert mode on/off. If insert
+mode is off, then overwrite mode is on.
+
+
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_INDENT
+$ SCREEN SETTINGS_HELP 82
+$ TITLE "Auto-indent Mode"
+Toggles auto-indenting on/off. When auto-
+ident is on and \bEnter\n is pressed, the
+cursor is positioned under the first non-
+blank character of the above line.
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_TABS
+$ SCREEN SETTINGS_HELP 83
+$ SIZE 54 6
+$ TITLE "Use Tabs"
+If toggled on, then pressing TAB will insert enough
+spaces to move the cursor to the next tab stop, which
+is a multiple of the tab width in [EDITOR_TABSIZE|TAB SIZE].
+If tabs are off, then pressing the tab key will align
+the cursor with the next word in the line above.
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_TABSIZE
+$ SCREEN SETTINGS_HELP 84
+$ TITLE "Tab Size"
+The tab size is the number of spaces
+between each tab stop. The tab size is
+ignored if [EDITOR_TABS|USE TABS] is turned off.
+
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_EXPANDTABS
+$ SCREEN SETTINGS_HELP 85
+$ TITLE "Expand Tabs"
+If toggled on, then files will be loaded
+with tab characters expanded into spaces.
+If off, then tab chars will show in the
+file unexpanded.
+
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_COMPRESSTABS
+$ SCREEN SETTINGS_HELP 86
+$ TITLE "Compress Tabs"
+If toggled on, then files will be saved
+with spaces compressed into tabs. If off,
+the file is saved with no tabs. 
+
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_WRITEEOF
+$ SCREEN SETTINGS_HELP 87
+$ TITLE "Write EOF Marker"
+If toggled on, then all files will be
+saved with an EOF (end-of-file) character
+appended to the end of the file.
+
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_BACKUP
+$ SCREEN SETTINGS_HELP 88
+$ SIZE 53 5
+$ TITLE "Backup Files"
+Before saving a file, the editor checks to see if a
+file with the same name already exists. If it does,
+then it is copied or renamed to the [EDITOR_BACKUPPATH|backup directory]
+(or file spec).
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_SAFESAVE
+$ SCREEN SETTINGS_HELP 89
+$ SIZE 47 7
+$ TITLE "Safe Save"
+The purpose of the safe save is to ensure that
+files are not lost when an error occurs while
+writing over an original copy.  The safe save
+routine first writes the file to a [EDITOR_TEMPPATH|temporary]
+filename.  If successful, the file is then
+written to the original filename.
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_DEFEXTENSION
+$ SCREEN SETTINGS_HELP 90
+$ TITLE "Default Extension"
+$ SIZE 42 3
+This extension is assumed whenever the
+file extension is left off of a filename.
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_PRINTER
+$ SCREEN SETTINGS_HELP 91
+$ SIZE 45 5
+$ TITLE "Printer File"
+All printer output is directed to this file.
+It should normally be PRN, LPT1, COM1, etc.
+Enter a disk filename here if you want to
+redirect all printer output to a file.
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_PRINTER_STRING
+$ SCREEN SETTINGS_HELP 92
+$ SIZE 45 5
+$ TITLE "Printer Setup String"
+Enter a SETUP string for your printer.
+To enter a non-printable character, you
+may find it helpful to popup the ASCII
+box (Alt-A), to insert the characters.
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_PAGEMODE
+$ SCREEN SETTINGS_HELP 93
+$ SIZE 45 5
+$ TITLE "View PageMode"
+The editor has 2 versions of the PageUp
+and PageDown functions. OFF means move
+to top or bottom of screen. ON means move
+to the same screen line on next page.
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_NUMLOCK
+$ SCREEN SETTINGS_HELP 94
+$ SIZE 45 5
+$ TITLE "Numlock Mode"
+You can save your choice of Numlock mode
+and automatically have Numlock ON or OFF
+when you first start the editor.
+                        See [SETTINGS_EDITOR|editor menu]
+$ LABEL EDITOR_BLOCKQUOTE
+$ SCREEN SETTINGS_HELP 95
+$ SIZE 45 7
+$ TITLE "Block Paste Prefix"
+You can choose up to 3 characters to
+prefix each line when you Paste a block
+of lines. This can be useful if you want
+to reply to a mail message and Quote the
+original text.
+                         See [SETTINGS_EDITOR|editor menu]
+$$ $ LABEL EDITOR_WORDWRAP
+$$ $ SCREEN SETTINGS_HELP 96
+$$ $ SIZE 45 5
+$$ $ TITLE "Word Wrap Mode"
+$$ You can choose to turn on word wrap and
+$$ KEd will automatically start a new line
+$$ as you type if you exceed the Right Margin.
+$$                         See [SETTINGS_EDITOR|editor menu]
+$$
+$$ $ LABEL EDITOR_RIGHTMARGIN
+$$ $ SCREEN SETTINGS_HELP 97
+$$ $ SIZE 45 5
+$$ $ TITLE "Right Margin for Word Wrap"
+$$ Set a right margin if you use Word Wrap.
+$$ If Word Wrap is OFF, then this is ignored.
+$$                         See [SETTINGS_EDITOR|editor menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SETTINGS_VIEW
+$ SCREEN SETTINGS_HELP 100
+$ SIZE 49 10
+$ TITLE "Active View Settings"
+These settings affect only the active viewer:
+
+[VIEW_INSERT|INSERT_MODE]:
+  Toggle insert mode on/off.
+[VIEW_INDENT|AUTO-INDENT]:
+  Toggle auto-indenting on/off.
+[VIEW_TABS|USE TABS]:
+  Toggle tabs on/off.
+[VIEW_TABSIZE|TAB SIZE]:
+  Change tab width.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$
+$ LABEL VIEW_INSERT
+$ SCREEN SETTINGS_HELP 101
+$ TITLE "Insert Mode"
+$ SIZE 40 3
+Toggles insert mode on/off. If insert
+mode is off, then overwrite mode is on.
+                 See [SETTINGS_VIEW|view settings menu]
+$ LABEL VIEW_INDENT
+$ SCREEN SETTINGS_HELP 102
+$ SIZE 42 5
+$ TITLE "Indent Mode"
+Toggles auto-indenting on/off. When auto-
+ident is on and \bEnter\n is pressed, the
+cursor is positioned under the first non-
+blank character of the above line.
+                 See [SETTINGS_VIEW|view settings menu]
+$ LABEL VIEW_TABS
+$ SCREEN SETTINGS_HELP 103
+$ SIZE 47 6
+$ TITLE "Tab Mode"
+If toggled on, pressing TAB will insert enough
+spaces to move the cursor to the next tab stop
+as specified by [VIEW_TABSIZE|TAB SIZE]. If off, then a tab
+will align the cursor with the next word in the
+line above the current line.
+                 See [SETTINGS_VIEW|view settings menu]
+$ LABEL VIEW_TABSIZE
+$ SCREEN SETTINGS_HELP 104
+$ TITLE "Tab Size"
+$ SIZE 45 4
+The tab size is the number of spaces between
+each tab stop. The tab size is ignored if
+[VIEW_TABS|USE TABS] is turned off.
+                 See [SETTINGS_VIEW|view settings menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SETTINGS_PATH
+$ SCREEN SETTINGS_HELP 120
+$ SIZE 46 7
+$ TITLE "Path Menu"
+[EDITOR_BACKUPPATH|BACKUP FILE SPEC]:
+  Filename for auto-backups.
+[EDITOR_TEMPPATH|TEMPORARY FILE SPEC]:
+  Temporary filename. Used during "save save"
+  mode.
+[EDITOR_HELPPATH|HELP PATH]:
+  Filename of help file.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$
+$ LABEL EDITOR_BACKUPPATH
+$ SCREEN SETTINGS_HELP 121
+$ SIZE 43 9
+$ TITLE "Backup File Spec"
+ When [EDITOR_BACKUP|auto-backup mode] is on, files are
+ backed-up to this filename. The filename
+ may be a directory or may contain a mask
+ to change the filename. For example,
+ C:\BACKUP\*.* will place all backup files
+ in the BACKUP directory on drive C, and
+ *.BAK will give all backups a .BAK
+ extension.
+                             See [SETTINGS_PATH|path menu]
+$ LABEL EDITOR_TEMPPATH
+$ SCREEN SETTINGS_HELP 122
+$ SIZE 47 8
+$ TITLE "Temporary File Spec"
+ When [EDITOR_SAFESAVE|"safe save"] mode is on, this filename
+ determines where to put the temporary files.
+ It may be a directory or it may contain a
+ mask to change the filename. For example,
+ C:\TEMP\*.* places temporary files in the
+ TEMP directory on drive C, and *.$$$ gives
+ all temporary files a .$$$ extension.
+                             See [SETTINGS_PATH|path menu]
+$ LABEL EDITOR_HELPPATH
+$ SCREEN SETTINGS_HELP 123
+$ SIZE 47 5
+$ TITLE "Help Filename"
+ This is the filename of the editor's help
+ file. If no settings file is loaded, it
+ defaults to the same directory and name as
+ the editor but with a .HLP extension instead.
+                 See [SETTINGS_VIEW|view settings menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **     Search Help      **
+$$ **************************
+$ LABEL SEARCH_MENU
+$ SCREEN SEARCH_HELP 1
+$ SIZE 48 13
+$ TITLE "Search/Replace Menu"
+[SCHMENU_SEARCH|SEARCH]:
+  Search for a string of characters.
+[SCHMENU_REPLACE|REPLACE]:
+  Search for a string of characters and replace
+  it with another.
+[SCHMENU_NEXT|NEXT]:
+  Search for the next occurance of the search
+  string.
+[SCHMENU_PREVIOUS|PREVIOUS]:
+  Search backwards for the previous occurance
+  of the search string.
+
+  (See search & replace options on next page)
+$ PAGE
+$ TITLE "Search/Replace Options:"
+[SCHOPTIONS_DIRECTION|DIRECTION]:
+  Default search direction.
+[SCHOPTIONS_CASE|CASE SENSITIVE]:
+  This determines whether or not upper and
+  lowercase characters are considered the same.
+[SCHOPTIONS_WORDS|MATCH WORDS ONLY]:
+  Search for whole words only.
+[SCHFLAGS_QUERY|QUERY REPLACE]:
+  Request permission before replacments.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$
+$ LABEL SCHMENU_SEARCH
+$ SCREEN SEARCH_HELP 2
+$ SIZE 50 6
+$ TITLE "Search"
+ Enter a string to search for in the file. The
+ search starts at the cursor and continues in
+ the default [SCHOPTIONS_DIRECTION|direction]. The cursor will be
+ positioned over the first character of the
+ string found.
+                                See [SEARCH_MENU|search menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SCHMENU_REPLACE
+$ SCREEN SEARCH_HELP 3
+$ SIZE 50 6
+$ TITLE "Replace"
+ Enter both a string to search for and a string
+ to replace it with. The search starts at the
+ cursor position and continues in the default
+ [SCHOPTIONS_DIRECTION|direction]. Occurances of the search string are
+ replaced with the replace string.
+                                See [SEARCH_MENU|search menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SCHMENU_NEXT
+$ SCREEN SEARCH_HELP 4
+$ SIZE 39 4
+$ TITLE "Find Next"
+ Search for the next occurance of the
+ search string, starting at one column
+ to the right of the cursor.
+                      See [SEARCH_MENU|search menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SCHMENU_PREVIOUS
+$ SCREEN SEARCH_HELP 5
+$ SIZE 39 4
+$ TITLE "Find Previous"
+ Search for a previous occurance of
+ search string, starting at one column
+ to the left of the cursor.
+                     See [SEARCH_MENU|search menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SCHOPTIONS_DIRECTION
+$ SCREEN SEARCH_HELP 6
+$ SIZE 35 4
+$ TITLE "Search Direction"
+ This is the default direction for
+ searching. It is ignored by the
+ search next/previous functions.
+                  See [SEARCH_MENU|search menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SCHOPTIONS_CASE
+$ SCREEN SEARCH_HELP 7
+$ SIZE 39 6
+$ TITLE "Case Sensitivity"
+ Determines whether or not upper- and
+ and lowercase characters are dis-
+ tinguished from each while searching.
+ If set to YES, then they are dis-
+ tinguised from each other.
+                      See [SEARCH_MENU|search menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SCHOPTIONS_WORDS
+$ SCREEN SEARCH_HELP 8
+$ SIZE 41 5
+$ TITLE "Match Words Only"
+ If matching words only, then strings
+ can only be found if they are surround-
+ ed by non-word characters, ie. spaces
+ or punctuation.
+                        See [SEARCH_MENU|search menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SCHFLAGS_QUERY
+$ SCREEN SEARCH_HELP 9
+$ SIZE 36 5
+$ TITLE "Query Replace"
+ If query replace is enabled, then
+ a dialog box will pop-up and ask
+ permission before any replacements
+ are made.
+                   See [SEARCH_MENU|search menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN SEARCH_HELP 20
+$ SIZE 55 7
+$ TITLE "Verify Replace Help"
+ Press:
+  \bY\n  to replace this occurance and proceed.
+  \bN\n  to skip this occurance and proceed with search.
+  \bO\n  to replace this occuance and stop searching.
+  \bA\n  to replace all occurances without asking for
+         permission to replace.
+ \bESC\n to abort search.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN SEARCH_HELP 30
+$ SIZE 50 6
+$ TITLE "MultiFile Search Help"
+ \bNEXT\n   Continue search with next file.
+ \bSKIP\n   Skip next file described in box and
+              continue with the search.
+ \bKEEP\n   Don't close the window containing the
+              file just searched.
+ \bCANCEL\n to cancel the search.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **     Dirlist Help     **
+$$ **************************
+$ SCREEN DIRLIST_HELP 1
+$  SIZE 41 9
+$  TITLE "Dirlist Help"
+  Use arrow keys, \bHome\n, \bEnd\n, \bPgUp\n, and
+\bPgDn\n to select filename. Press \bEnter\n
+to accept filename.
+
+   \bF3\n - Sort menu
+   \bF4\n - Attributes menu
+   \bBS\n - Parent directory (backspace)
+  \bTAB\n - Edit path
+\bEnter\n - Accept filename
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIRLIST_HELP 2
+$ SIZE 40 15
+$ TITLE "Sort Menu"
+ \bNAME\n
+  Sort filelist by filename.
+ \bEXTENSION\n
+  Sort filelist by filename extension
+  then by actual filename.
+ \bDATE\n
+  Sort filelist by dates from earliest
+  to latest.
+ \bSIZE\n
+  Sort filelist by file sizes from
+  smallest to largest.
+ \bREVERSE ON/OFF\n
+  Reverse the order of sorting. For
+  example, a size sort would sort from
+  largest file to smallest file.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIRLIST_HELP 3
+$ SIZE 40 14
+$ TITLE "Attribute Filter"
+ If any of these flags are set to off,
+ then any file that has that bit set
+ will not be displayed.
+
+ \bREAD-ONLY ON/OFF\n
+  Show all files that have the read-only
+  bit (r) set.
+ \bARCHIVED ON/OFF\n
+  Show all files that have not been
+  archived (a).
+ \bSYSTEM ON/OFF\n
+  Show all system files (s).
+ \bHIDDEN ON/OFF\n
+  Show all hidden files (h).
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIRLIST_HELP 4
+$ SIZE 42 4
+Enter new pathname for directory listing.
+Use wildcards in basename to constrain
+list to certain filenames and extenstions.
+    Example:  C:\EDIT\DOCS\*.TXT
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **     ASCIIBox Help    **
+$$ **************************
+$ SCREEN ASCII_HELP 1
+$ SIZE 40 15
+$ TITLE "ASCIIBox Help"
+Use the cursor keys to move cursor
+around character set.
+
+Press:
+ \bc\n to insert character under cursor
+    into file.
+ \bd\n to insert decimal equivalent.
+ \bH\n to insert hex equivalent with
+    letters in uppercase (ex: F9)
+ \bh\n to insert hex equivalent with
+    letters in lowercase (ex: f9)
+
+Pressing \bEnter\n will insert the
+value into the file based on the last
+mode used.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **    PrintMenu Help    **
+$$ **************************
+$ LABEL PRINT_MENU
+$ SCREEN PRINT_HELP 1
+$ SIZE 33 10
+$ TITLE "Print Menu"
+[PRINT_FILE|PRINT FILE]:
+  Print file in active view
+[PRINT_BLOCK|PRINT BLOCK]:
+  Print block in active view
+[PRINT_SCRAP|PRINT SCRAP]:
+  Print contents of scrap buffer
+[LINEFEED|LINEFEED]:
+  Advance paper one line
+[FORMFEED|FORMFEED]:
+  Advance paper to the next page
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL PRINT_FILE
+$ SCREEN PRINT_HELP 10
+$ SIZE 36 3
+$ TITLE "Print File"
+Dump the file in the active view to
+the [EDITOR_PRINTER|printer].
+                     See [PRINT_MENU|print menu]
+$ LABEL PRINT_BLOCK
+$ SCREEN PRINT_HELP 11
+$ SIZE 35 3
+$ TITLE "Print Block"
+Print the currently defined block
+in the active view to the [EDITOR_PRINTER|printer].
+                     See [PRINT_MENU|print menu]
+$ LABEL PRINT_SCRAP
+$ SCREEN PRINT_HELP 12
+$ SIZE 39 3
+$ TITLE "Print Scrap"
+Print the contents of the global scrap
+buffer to the [EDITOR_PRINTER|printer].
+                     See [PRINT_MENU|print menu]
+$ LABEL LINEFEED
+$ SCREEN PRINT_HELP 13
+$ SIZE 42 3
+$ TITLE "Print Linefeed"
+Issue a linefeed command to the printer
+to advance the printer paper by one line.
+                     See [PRINT_MENU|print menu]
+$ LABEL FORMFEED
+$ SCREEN PRINT_HELP 14
+$ SIZE 39 3
+$ TITLE "Print Formfeed"
+Send a formfeed command to the printer
+to advance the paper to the next page.
+                     See [PRINT_MENU|print menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **    Filelist Help     **
+$$ **************************
+$$
+$$   comment out for now 8-6-93
+$$
+$$$ LABEL FILELIST_MENU
+$$$ SCREEN FILELIST_HELP 1
+$$$ SIZE 37 14
+$$$ TITLE "Filelist Menu"
+$$[FILELIST_SET|SET]:
+$$  Set the filelist view
+$$[FILELIST_CLEAR|CLEAR]:
+$$  Disable filelist functions
+$$[FILELIST_NEXT|NEXT]:
+$$  Load next file
+$$[FILELIST_PREV|PREV]:
+$$  Load previous file
+$$[FILELIST_TOP|TOP]:
+$$  Jump to the top of the filelist
+$$[FILELIST_BOTTOM|BOTTOM]:
+$$  Jump to the end of the filelist
+$$[FILELIST_IMPORT|IMPORT]:
+$$  Load current entry in the filelist
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$$ LABEL FILELIST_SET
+$$$ SCREEN FILELIST_HELP 10
+$$$ SIZE 37 4
+$$$ TITLE "Set Filelist"
+$$Makes active view the filelist view.
+$$All succeeding filelist operations
+$$will apply to that view.
+$$                   See [FILELIST_MENU|filelist menu]
+$$$ LABEL FILELIST_CLEAR
+$$$ SCREEN FILELIST_HELP 11
+$$$ SIZE 37 4
+$$$ TITLE "Clear Filelist"
+$$Disables all filelist functions until
+$$a new filelist view is set.
+$$                   See [FILELIST_MENU|filelist menu]
+$$$ LABEL FILELIST_NEXT
+$$$ SCREEN FILELIST_HELP 12
+$$$ SIZE 36 5
+$$$ TITLE "Next File"
+$$Loads the filename at the cursor
+$$row in the filelist into the active
+$$view.  The cursor is automatically
+$$advanced to the next row.
+$$                 See [FILELIST_MENU|filelist menu]
+$$$ LABEL FILELIST_PREV
+$$$ SCREEN FILELIST_HELP 13
+$$$ SIZE 36 5
+$$$ TITLE "Previous File"
+$$Moves to the previous entry in the
+$$filelist and loads that file into
+$$the active view.
+$$                 See [FILELIST_MENU|filelist menu]
+$$$ LABEL FILELIST_TOP
+$$$ SCREEN FILELIST_HELP 14
+$$$ SIZE 36 4
+$$$ TITLE "Filelist Top"
+$$Moves filelist cursor to the top of
+$$the filelist.  An asterisk may be
+$$used to mark the top of a filelist.
+$$                 See [FILELIST_MENU|filelist menu]
+$$$ LABEL FILELIST_BOTTOM
+$$$ SCREEN FILELIST_HELP 15
+$$$ SIZE 36 5
+$$$ TITLE "Filelist Bottom"
+$$Moves the filelist cursor to the
+$$bottom of the filelist.  An aster-
+$$isk may be used to mark the end of
+$$a filelist.
+$$                 See [FILELIST_MENU|filelist menu]
+$$$ LABEL FILELIST_IMPORT
+$$$ SCREEN FILELIST_HELP 16
+$$$ SIZE 43 5
+$$$ TITLE "Import File"
+$$Loads the file specified by current entry
+$$in the filelist.  Unlike the Next and
+$$Prev commands, Import does not advance the
+$$cursor to the next or previous entry.
+$$                     See [FILELIST_MENU|filelist menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **    Picklist Help     **
+$$ **************************
+$ LABEL PICKLIST_HELP
+$ SCREEN PICKLIST_HELP 1
+$ SIZE 32 10
+$ TITLE "ViewPick Help"
+This picklist displays a list of
+existing views. Duplicates have
+a number followed by a bullet()
+in front of the entry.
+
+Use the cursor keys to move the
+highlighting bar over a view's
+filename and press Enter to
+bring that view to the front and
+make it active.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ **************************
+$$ **     Dialog Help      **
+$$ **************************
+$ SCREEN DIALOG_HELP 1
+$ SIZE 36 4
+Enter the name of the file to load.
+Use the OS2 wildcard characters
+(* and ?) to bring up a directory
+listing.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 2
+$ SIZE 38 3
+Type in the name of the file to save.
+Use OS2 wildcard characters (* and ?)
+to alter the filename that is used.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 3
+$ SIZE 34 2
+Type in a string of characters to
+be searched for
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 5
+$ SIZE 31 2
+Type text to replace what will
+be found by the search.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 7
+$ SIZE 35 5
+Enter a mask using OS2 wildcards
+to select files to be tagged or
+untagged. For example, *.C will
+tag/untag all files with a .C
+extension.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 8
+$ SIZE 42 9
+When [EDITOR_BACKUP|auto-backup mode] is on, files are
+backed-up to this filename. The filename
+may be a directory or may contain a mask
+to change the filename. For example,
+C:\BACKUP\*.* will place all backup files
+in the BACKUP directory on drive C, and
+*.BAK will give all backups a .BAK
+extension.
+                            See [SETTINGS_PATH|path menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 9
+$ SIZE 32 3
+This is the file spec for the
+backup files. Use wildcards to
+modify the actual filename used.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 10
+$ SIZE 46 8
+When [EDITOR_SAFESAVE|"safe save"] mode is on, this filename
+determines where to put the temporary files.
+It may be a directory or it may contain a
+mask to change the filename. For example,
+C:\TEMP\*.* places temporary files in the
+TEMP directory on drive C, and *.$$$ gives
+all temporary files a .$$$ extension.
+                            See [SETTINGS_PATH|path menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 11
+$ SIZE 42 9
+When [EDITOR_BACKUP|auto-backup mode] is on, files are
+backed-up to this filename. The filename
+may be a directory or may contain a mask
+to change the filename. For example,
+C:\BACKUP\*.* will place all backup files
+in the BACKUP directory on drive C, and
+*.BAK will give all backups a .BAK
+extension.
+                            See [SETTINGS_PATH|path menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 12
+$ SIZE 39 5
+This is the default filename extension.
+It will be appended to any filename
+with no extension. For example, if the
+extension is set to "TXT", then "MAIN"
+will become "MAIN.TXT"
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 13
+$ SIZE 48 4
+This is the filename for printer output. It is
+normally a printer (PRN, LPT1, COM1, etc.), but
+may be a file if you want to redirect printer
+output to it.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 20
+$ SIZE 44 3
+Enter a name for the new directory. Names
+are limited to 8 characters and an optional
+3 character extension.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ SCREEN DIALOG_HELP 100
+$ SIZE 40 3
+Enter the number of spaces to shift the
+block to the right.  Enter a negative
+number to shift left.
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SHELL_MENU
+$ SCREEN SHELL_HELP 1
+$ SIZE 40 14
+$ TITLE "Shell Menu"
+[SHELL_COMMAND|COMMAND]:
+  Enter OS2 command
+[RUN_DOSCOMMAND|RUN!]:
+  Execute OS2 command
+[SHELL_SCREEN|SCREEN]:
+  Show OS2 screen while executing
+[SHELL_LOADLOG|LOAD LOG]:
+  Load log file when command finished
+[SHELL_FILESAVE|FILE SAVE]:
+  Save file in active view before
+  executing OS2 command
+[SHELL_ALLSAVE|ALL SAVE]:
+  Save all files before executing
+  OS2 command
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SHELL_COMMAND
+$ SCREEN SHELL_HELP 10
+$ SIZE 43 11
+$ TITLE "Command"
+  Enter a OS2 command to be executed when
+[RUN_DOSCOMMAND|Shift-F3] is pressed or [RUN_DOSCOMMAND|Run!] is selected
+from the shell menu.  Before the command
+is executed, all occurances of \b%n\n will be
+replaced with the name of the active view.
+  If you want the output from the OS2
+command to be loaded into the editor,
+redirect the command's output to LOG.TXT
+("cc %n >log.txt", for example) and set the
+[SHELL_LOADLOG|Load log] menu item to yes.
+                             See [SHELL_MENU|shell menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL RUN_DOSCOMMAND
+$ SCREEN SHELL_HELP 11
+$ SIZE 44 4
+$ TITLE "Execute OS2 Command"
+Execute a OS2 command.  Select the menu item
+labeled [SHELL_COMMAND|Command] in the shell menu to enter
+the OS2 command that will be executed.
+                              See [SHELL_MENU|shell menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SHELL_SCREEN
+$ SCREEN SHELL_HELP 12
+$ SIZE 44 4
+$ TITLE "Screen"
+Determines whether or not the OS2 screen
+is displayed while the OS2 command is being
+executed.
+                             See [SHELL_MENU|shell menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SHELL_LOADLOG
+$ SCREEN SHELL_HELP 13
+$ SIZE 43 6
+$ TITLE "Load log"
+Determines whether the file named \bLOG.TXT\n
+is loaded and displayed after a OS2 command
+has been executed.  See the [SHELL_COMMAND|Command] menu
+item to find out how to redirect output to
+\bLOG.TXT\n.
+                            See [SHELL_MENU|shell menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SHELL_FILESAVE
+$ SCREEN SHELL_HELP 14
+$ SIZE 37 4
+$ TITLE "File save"
+Determines whether or not the file in
+the active view will be saved before
+the OS2 command is executed.
+                       See [SHELL_MENU|shell menu]
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL SHELL_ALLSAVE
+$ SCREEN SHELL_HELP 15
+$ SIZE 36 4
+$ TITLE "All save"
+Determines whether or not all files
+loaded into the editor will be saved
+before the OS2 command is executed.
+                      See [SHELL_MENU|shell menu]
+
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$ LABEL EDIT_TEXT
+$ SCREEN ABOUT_EDIT 1
+$ SIZE 65 20
+$ TITLE "About the Editor"
+                The Kudzu Editor (KEd)   OS/2 Version 2.07
+                   (C) 1992, 1993 by Kudzu Software
+                         Kudzu Software
+                    1452 North Ave Atlanta, GA 30307
+                      Compuserve ID:76254,764
+
+The Kudzu Editor is a general purpose text editor that is of 
+particular use to programmers. An ASCII chart, a keystroke 
+recorder/player, an OS/2 shell, configurable settings,
+comprehensive block capabilities, and strong search/replace
+functions are built-in.  See README.DOC for more information.
+
+Planned enhancements are keyboard remapping, a callable macro 
+facility, word wrap, and better integration with compilers. 
+
+Registration is $20 for personal use.
+PLEASE REGISTER SHAREWARE!
+
+If you like the editor, we'd love to hear from you! 
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+$$ ***** HELP ON HELP SCREEN *****
+$$ The help on help screen must be locus 255, screen 0
+$ LABEL HELP_ON_HELP
+$ SCREEN HELP_ON_HELP 0
+$ SIZE 46 16
+$ TITLE "Help on Help"
+    Use the arrow keys to move the selection
+ bar to highlighted items. Press \bHome\n to
+ jump to the first item on the screen; \bEnd
+ to jump to the last. Jump to related text
+ on a highlighted item by pressing \bEnter\n. To
+ backtrack through previous screens, press
+ the \bBackspace\n key.
+
+    Press \bPgUp\n and \bPgDn\n to flip through
+ through the pages. The page number is listed
+ in the upper right corner of the help window
+ followed by the total number of pages on the
+ topic. 
+
+    Move the help window by using the \bALT\n-
+ \bIJKL\n key group.

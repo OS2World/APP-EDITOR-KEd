@@ -1,0 +1,176 @@
+##################################################
+#                                                #
+#   Makefile for Editor Toolbox SOURCE           #
+#   Borland C++ OS/2 1.0                         #
+#                                                #
+##################################################
+
+.AUTODEPEND
+DEBUG = 1
+OBJ= os2_objs
+.PATH.obj= $(OBJ)
+
+CC  = g:\bcos2\bin\bcc
+ASM = g:\bcos2\bin\tasm
+LINK= g:\bcos2\bin\tlink
+
+!IF $(DEBUG)
+   CC_DBG= -v -vi
+   LINK_DBG= /v
+!ENDIF                   
+
+echo  LINK DEBUG = $(LINK_DBG)
+echo  CC   DEBUG = $(CC_DBG)
+
+#CFLAGS_G  = -a1 -P -sm -c -w -w-sig -Ig:\bcos2\include 
+# usual below ....
+CFLAGS_G  = -a1 -P -xp- -xf- -xd- -sm -c -RT- -w -w-sig -w-ucp -Ig:\bcos2\include 
+
+#CFLAGS_D  = -v -vi- -Oi -Oc             # try this
+
+CFLAGS_D  = -v -vi- -Od 
+#CFLAGS_D  = -v -vi- -N -Od 
+#  usual below ....
+#CFLAGS_D  = -v -vi- -N -Od -xp- 
+
+#CFLAGS_R  = -O1 -Oi -Oc -Ob    # bc 1.5 traps on window close
+CFLAGS_R  = -Oi -Oc -Ob        # 
+#CFLAGS_R  = -Oi -Oc 
+#CFLAGS_R  = -Od 
+ASMFLAGS_G = /mx /t /w2
+ASMFLAGS_D = 
+ASMFLAGS_R = 
+
+!IF $(DEBUG)
+OS2_LINK_OPTS= $(LINK_DBG) /Toe /s /m /ap /c /Oc /A:5 /B:0x10000 /w! /S:F000
+#OS2_LINK_OPTS=/Toe /s /m /ap /c /Oc /A:5 /v /B:0x10000 /w! /S:F000
+!ELSE
+OS2_LINK_OPTS=/Toe /s /ap /c /Oc /A:5 /B:0x10000 /w! /S:F000
+!ENDIF
+
+#STARTUP=g:\BCOS2\LIB\C02.OBJ g:\BCOS2\LIB\POPUP.OBJ
+STARTUP=g:\BCOS2\LIB\C02.OBJ 
+#OS2_LIBS=g:\BCOS2\LIB\C2MT.LIB + g:\BCOS2\LIB\OS2.LIB + tow_os2.lib
+OS2_LIBS=g:\BCOS2\LIB\C2MT.LIB + g:\BCOS2\LIB\OS2.LIB 
+PORT=.\os2_objs\rport.obj
+
+.cpp.obj:
+!IF $(DEBUG)
+        $(CC) $(CFLAGS_G) $(CFLAGS_D) -n$(.PATH.obj) {$** }
+!ELSE
+        $(CC)  $(CFLAGS_G) $(CFLAGS_R) -n$(.PATH.obj) {$** }
+!ENDIF
+
+.c.obj:
+!IF $(DEBUG)
+        $(CC) $(CFLAGS_G) $(CFLAGS_D) -n$(.PATH.obj) {$** }
+!ELSE
+        $(CC)  $(CFLAGS_G) $(CFLAGS_R) -n$(.PATH.obj) {$** }
+    #    $(CC)  $(CFLAGS_G) $(CFLAGS_R) {$< }
+!ENDIF
+
+.rc.res :
+    @echo ®®® Running resource compiler on $*.rc ¯¯¯
+    rc -r $*.rc
+
+.asm.obj:
+#!IF $(DEBUG)
+#        @echo ¯¯¯ asmflag_g = $(ASMFLAGS_G) $(ASMFLAGS_D)
+#        $(ASM) $(ASMFLAGS_G) $(ASMFLAGS_D) {$** }
+#!ELSE
+#        @echo ¯¯¯ asmflag_g = $(ASMFLAGS_G)
+        $(ASM) $(ASMFLAGS_G) $(ASMFLAGS_R) {$** }
+        copy fillw.obj .\os2_objs
+        copy tb5.obj .\os2_objs
+#        copy port.obj .\os2_objs
+#!ENDIF
+
+##################################################
+
+EDIT_OBJS=\ 
+   ADVFILE.obj \
+   ASCII.obj \
+   ASKFILE.obj \
+   ASSERT.obj \
+   BLOCK.obj \
+   BWIND.obj \
+#   CRITICAL.obj \
+   DIRLIST.obj \
+   DIRNAME.obj \
+   DIRSORT.obj \
+   DMM.obj \
+   EDIT.obj \
+   ED_CMD.obj \
+   EDSET.obj \
+   EDX.obj \
+   ERR_HAND.obj \
+#   FILE.obj \
+   GETKEY.obj \
+   HYPRHELP.obj \
+   KEYDEF.obj \
+   KEYMAC.obj \
+#   INITKEYS.obj \
+   LNED.obj \
+   MARK.obj \
+   MENU.obj \
+   MISC.obj \
+   MYLIB.obj \
+   PICKLIST.obj \
+   REDBOX.obj \
+   REDRAW.obj \
+   SEARCH.obj \
+   SETTING.obj \
+   SHEET.obj \
+   SHELL.obj \
+   STATUS.obj \
+#   VBWIND.obj \
+   VERSION.obj \
+   VIEWER.obj \
+#   TOOL.obj \
+   VIEW_COM.obj \
+   VIEW_DRW.obj \
+   VIEW_EXT.obj \
+   VIEW_FIL.obj \
+   VIEW_PIC.obj \
+   VIEW_SCH.obj \
+   VIEW_WIN.obj \
+#   VIEW_ZM.obj \
+   VMEM.obj \
+   WDISP.obj \ 
+   mymenu.obj \
+   xfile.obj 
+#
+#    for production, fillw.asm and tb5.asm should be used
+#    11-6-94 using only C routines, possible bugs in asm routines
+#
+#   fillw.obj \    
+#   tb5.obj         
+
+
+TOW_OBJS=\
+   tbasewin.obj \
+   twcore.obj \
+   twsetup.obj \
+   twdisp.obj \
+   twline.obj \
+   twmove.obj \
+   tmisc.obj \
+   tow_os2.obj \
+   tblitt.obj 
+#   tgetkey.obj
+
+
+##################################################
+
+all: KED.exe 
+
+KED.exe: $(EDIT_OBJS) $(TOW_OBJS)
+#  $(LINK) $(OS2_LINK_OPTS) @edobjs.lnk, ked,,$(OS2_LIBS), ked.def #works ok
+  $(LINK) $(OS2_LINK_OPTS) @&&! 
+#  $(STARTUP) $(PORT) .\$** , ked,,$(OS2_LIBS), ked.def 
+  $(STARTUP) .\$** , ked,,$(OS2_LIBS), ked.def 
+!
+  rc $*.res $*.exe 
+
+###########################################################################
+

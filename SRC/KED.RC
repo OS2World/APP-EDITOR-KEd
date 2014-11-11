@@ -1,0 +1,7 @@
+/* resource file for KED  the Kudzu Text Editor  */
+
+/*#include <os2.h>  */
+
+/* POINTER 1 "KED.ICO" */
+
+ICON 1 PRELOAD "KED.ICO"

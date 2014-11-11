@@ -1,0 +1,46 @@
+File TOOL.CPP:
+47      struct view_rec *v= (struct view_rec *)Mem::vmem_trans (active_view);
+50      line_hdr= (struct line_header *)Mem::vmem_trans (get_line (m->row));
+File VMEM.CPP:
+43      void *Mem::vmem_trans (vptr p_in)    
+265     contents= (USHORT *)Mem::vmem_trans (p_in);  // get pointer to start of block
+318        burst_page= (USHORT *)Mem::vmem_trans (burst_page_v);
+354        burst_page= (USHORT *)Mem::vmem_trans (burst_page_v);
+File FILELIST.CPP:
+37      v= (struct view_rec *)Mem::vmem_trans (active_view);
+75      struct line_header *line_hdr= (struct line_header *)Mem::vmem_trans (get_line (get_mark (cursor)->row));
+File BLOCK.CPP:
+102     struct sheet *s= (struct sheet *)Mem::vmem_trans (scrap->sh);
+158        v= (struct view_rec *)Mem::vmem_trans (active_view);
+206        cur = (struct sheet *)Mem::vmem_trans (active_sheet);
+219     struct view_rec *v= (struct view_rec *)Mem::vmem_trans (active_view);
+256     struct view_rec *v= (struct view_rec *)Mem::vmem_trans (active_view);
+272     struct view_rec *v= (struct view_rec *)Mem::vmem_trans (active_view);
+299     s= (struct sheet *)Mem::vmem_trans (scrap->sh);
+305     v= (struct view_rec *)Mem::vmem_trans (active_view);
+316        lastline= ((struct sheet *)Mem::vmem_trans (v->sheet))->line_count-1;
+323           h= (struct line_header *)Mem::vmem_trans (line);
+344           h= (struct line_header *)Mem::vmem_trans (get_line_anysheet (s,0));
+352           h= (struct line_header *)Mem::vmem_trans (line1);
+355           h= (struct line_header *)Mem::vmem_trans (line2);
+385     struct view_rec *v= (struct view_rec *)Mem::vmem_trans (active_view);
+439     struct view_rec *v= (struct view_rec *)Mem::vmem_trans (active_view);
+445     v= (struct view_rec *)Mem::vmem_trans (active_view);
+476     struct view_rec *v= (struct view_rec *)Mem::vmem_trans (active_view);
+File VIEW_PIC.CPP:
+31      v= (struct view_rec *)Mem::vmem_trans (cur_view);
+35         v= (struct view_rec *)Mem::vmem_trans (cur_view);
+41         v= (struct view_rec *)Mem::vmem_trans (cur_view);
+67      s= (struct sheet *)Mem::vmem_trans (v->sheet);
+File INITKEYS.CPP:
+221          sh = (struct sheet *)Mem::vmem_trans(scrap->sh);
+224             line_hdr = (struct line_header *)Mem::vmem_trans(line);
+File VIEW_ZM.CPP:
+43      struct view_rec *v= (struct view_rec *)Mem::vmem_trans(active_view);
+106     struct view_rec *v= (struct view_rec *)Mem::vmem_trans(active_view);
+147     struct view_rec *v= (struct view_rec *)Mem::vmem_trans(active_view);
+264        struct view_rec *v= (struct view_rec *)Mem::vmem_trans(active_view);
+File VIEW_COM.CPP:
+306     struct view_rec *v= (struct view_rec *)Mem::vmem_trans (view_v);
+332     struct view_rec *v= (struct view_rec *)Mem::vmem_trans (active_view);
+368     struct view_rec *v = (struct view_rec *)Mem::vmem_trans (active_view);

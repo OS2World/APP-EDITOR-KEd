@@ -1,0 +1,104 @@
+//
+//           KED 2.17  pseudocode for word wrap
+//
+//
+//           wrap_line_down is SHEET only
+//
+//           see function sheet_line_length(ULONG row);
+//
+//           The 2 conditions are:
+                  keyboard entry
+                  file load
+
+   For keyboard entry, the cursor is always at the end of the 1st wrap line
+   col >= max_len
+
+   For File load, the cursor is above the current line, usually row 0, col 0
+
+   I would like view_com ONLY to track cursor, but sheet_splitline will
+   move the cursor if used.
+
+========================================================================
+wrap_line_down(char* str, str_len)     (do I need row passed ?)
+
+       if(str_len > max_len)
+          create new blank line
+          copy as much of str as will fit
+          adjust beginning str ptr and str_len
+          call wrap_line_down           (recursive)
+        
+       add str to row
+
+       if(new_line_len > max_len)
+          call wrap_line_down           (recursive)
+
+
+======================================================================
+wrap_line_up(char* str, str_len)     (do I need row passed ?)
+
+       if(first_words on line will fit on prev_line)
+          move first_words to prev line
+          del first_words from curr line
+          call wrap_line_up             (recursive) 
+
+
+======================================================================
+addchar       (from keyboard)
+
+
+         insert char in sheet
+(ver 1)
+         if(position < max_len) {
+            if(line_len < max_len)
+               return
+            else {
+               wrap_line_down            (at last white space before max_len)
+               if(position > line_len)  
+                  wrap cursor
+         }
+         else {
+               wrap_line_down
+               if(position > line_len)
+                  wrap cursor
+        }    
+
+
+(ver 2)
+        if(position > max_len)  || (line_len > max_len) {
+               wrap_line_down            (at last white space before max_len)
+               if(position > line_len)  
+                  wrap cursor
+        }
+         else 
+            return
+            
+
+
+
+
+===================================================================
+
+addstr      (from file)
+
+
+         insert string in sheet
+         if(line_len < max_len)
+               return
+
+         wrap_line_down    (at last white space before max_len)
+
+
+===================================================================
+
+
+
+
+
+
+                     
+
+                     
+                     
+
+                     
+                                                   

@@ -1,0 +1,65 @@
+
+                  FUTURES DOC
+
+          This charts the course for KED future development
+          Items listed mostly concern internal linkages
+
+November 21, 1994  next version after 2.15
+
+          1. increase efficiency by eliminating vmem_trans(active_view)
+
+             create a linked-list class that holds active views, and
+             will in-line return the current active_view. Only functions
+             that change the current view should require write access.
+             NOTE: possibly use an array. Should not need very many
+             entries.
+
+          1A. do the same for sheets
+
+             NOTE: leave most of the vmem stuff in sheet.cpp
+             The low-level sheet functions are too complex to change....
+
+          2. create a mark class to hold the mark array and return
+             the most common functions in-line
+             (like get_mark() )
+
+          3. create a view class and sheet class
+            
+             compose classes with mark class inside each
+
+          NOTES:
+          Creating view and sheet classes should simplify the low-level
+          functions because sheets and views will always know which 
+          objects they are acting on, and passing a view or sheet param
+          to a function will go away. Thus, code will be faster, smaller,
+          and easier to maintain.
+
+========================================================================
+
+          1. use Borland string class for many of the complex
+             string functions.
+
+             Like stuff in dialog box and dirname and dirlist 
+             files.
+
+          2. write an asm "smart" exception handler that will dump
+             the call stack to disk upon traps.
+
+             CIS messages suggest using DosGetExceptionFromEIP
+             to walk the call stack in excpt handler. undoc'ed 
+             at present 12/94
+
+          3. rewrite the file open/close sheet load/save into 
+             a class that includes all the smart save and 
+             backup file features. Expand default extensions to
+             20 or 30. use the string classes for filename 
+             manipulation.
+
+
+          4. create dialog and prompt box classes in TOW.
+
+
+          5. ascii format INI file class
+
+
+

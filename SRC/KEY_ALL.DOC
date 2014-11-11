@@ -1,0 +1,565 @@
+//            RAW KEY SCAN CODE TABLE
+
+// --- value ---
+#if defined(USE_RAW_KEYS)
+#if defined(ZIL_MSDOS) || defined(ZIL_OS2)
+
+typedef unsigned RAW_CODE
+
+const RAW_CODE ESCAPE                   = 0x011B;   // Miscellaneous keys
+const RAW_CODE ENTER                    = 0x1C0D;
+const RAW_CODE SPACE                    = 0x3920;
+const RAW_CODE BACKSPACE                = 0x0E08;
+const RAW_CODE CTRL_BACKSPACE           = 0x0E7F;
+const RAW_CODE ALT_BACKSPACE            = 0x0E00;
+const RAW_CODE TAB                      = 0x0F09;
+const RAW_CODE CTRL_TAB                 = 0x9400;
+const RAW_CODE BACKTAB                  = 0x0F00;
+
+const RAW_CODE CTRL_BREAK               = 0x0000;
+const RAW_CODE CTRL_C                   = 0x2E03;
+
+const RAW_CODE ALT_ESCAPE               = 0x0100;
+const RAW_CODE ALT_PERIOD               = 0x3400;
+const RAW_CODE ALT_SPACE                = 0x3920;
+const RAW_CODE ALT_WHITE_MINUS          = 0x8200;
+const RAW_CODE ALT_WHITE_PLUS           = 0x8300;
+
+const RAW_CODE ALT_A                    = 0x1E00;
+const RAW_CODE ALT_B                    = 0x3000;
+const RAW_CODE ALT_C                    = 0x2E00;
+const RAW_CODE ALT_D                    = 0x2000;
+const RAW_CODE ALT_E                    = 0x1200;
+const RAW_CODE ALT_F                    = 0x2100;
+const RAW_CODE ALT_G                    = 0x2200;
+const RAW_CODE ALT_H                    = 0x2300;
+const RAW_CODE ALT_I                    = 0x1700;
+const RAW_CODE ALT_J                    = 0x2400;
+const RAW_CODE ALT_K                    = 0x2500;
+const RAW_CODE ALT_L                    = 0x2600;
+const RAW_CODE ALT_M                    = 0x3200;
+const RAW_CODE ALT_N                    = 0x3100;
+const RAW_CODE ALT_O                    = 0x1800;
+const RAW_CODE ALT_P                    = 0x1900;
+const RAW_CODE ALT_Q                    = 0x1000;
+const RAW_CODE ALT_R                    = 0x1300;
+const RAW_CODE ALT_S                    = 0x1F00;
+const RAW_CODE ALT_T                    = 0x1400;
+const RAW_CODE ALT_U                    = 0x1600;
+const RAW_CODE ALT_V                    = 0x2F00;
+const RAW_CODE ALT_W                    = 0x1100;
+const RAW_CODE ALT_X                    = 0x2D00;
+const RAW_CODE ALT_Y                    = 0x1500;
+const RAW_CODE ALT_Z                    = 0x2C00;
+
+const RAW_CODE ALT_1                    = 0x7800;
+const RAW_CODE ALT_2                    = 0x7900;
+const RAW_CODE ALT_3                    = 0x7A00;
+const RAW_CODE ALT_4                    = 0x7B00;
+const RAW_CODE ALT_5                    = 0x7C00;
+const RAW_CODE ALT_6                    = 0x7D00;
+const RAW_CODE ALT_7                    = 0x7E00;
+const RAW_CODE ALT_8                    = 0x7F00;
+const RAW_CODE ALT_9                    = 0x8000;
+const RAW_CODE ALT_0                    = 0x8100;
+
+const RAW_CODE GRAY_ENTER               = 0xE00D;   // Grey keys
+const RAW_CODE GRAY_UP_ARROW            = 0x48E0;
+const RAW_CODE GRAY_DOWN_ARROW          = 0x50E0;
+const RAW_CODE GRAY_LEFT_ARROW          = 0x4BE0;
+const RAW_CODE GRAY_RIGHT_ARROW         = 0x4DE0;
+const RAW_CODE GRAY_INSERT              = 0x52E0;
+const RAW_CODE GRAY_DELETE              = 0x53E0;
+const RAW_CODE GRAY_HOME                = 0x47E0;
+const RAW_CODE GRAY_END                 = 0x4FE0;
+const RAW_CODE GRAY_PGUP                = 0x49E0;
+const RAW_CODE GRAY_PGDN                = 0x51E0;
+const RAW_CODE GRAY_DIVIDE              = 0xE02F;
+const RAW_CODE GRAY_MULTIPLY            = 0x372A;
+const RAW_CODE GRAY_PLUS                = 0x4E2B;
+const RAW_CODE GRAY_MINUS               = 0x4A2D;
+
+const RAW_CODE CTRL_GRAY_UP_ARROW       = 0x8DE0;
+const RAW_CODE CTRL_GRAY_DOWN_ARROW     = 0x91E0;
+const RAW_CODE CTRL_GRAY_LEFT_ARROW     = 0x73E0;
+const RAW_CODE CTRL_GRAY_RIGHT_ARROW    = 0x74E0;
+const RAW_CODE CTRL_GRAY_INSERT         = 0x92E0;
+const RAW_CODE CTRL_GRAY_DELETE         = 0x93E0;
+const RAW_CODE CTRL_GRAY_HOME           = 0x77E0;
+const RAW_CODE CTRL_GRAY_END            = 0x75E0;
+const RAW_CODE CTRL_GRAY_PGUP           = 0x84E0;
+const RAW_CODE CTRL_GRAY_PGDN           = 0x76E0;
+const RAW_CODE CTRL_GRAY_DIVIDE         = 0x9500;
+const RAW_CODE CTRL_GRAY_MULTIPLY       = 0x9600;
+const RAW_CODE CTRL_GRAY_PLUS           = 0x9000;
+const RAW_CODE CTRL_GRAY_MINUS          = 0x8E00;
+
+const RAW_CODE ALT_GRAY_UP_ARROW        = 0x9800;
+const RAW_CODE ALT_GRAY_DOWN_ARROW      = 0xA000;
+const RAW_CODE ALT_GRAY_LEFT_ARROW      = 0x9B00;
+const RAW_CODE ALT_GRAY_RIGHT_ARROW     = 0x9D00;
+const RAW_CODE ALT_GRAY_INSERT          = 0xA200;
+const RAW_CODE ALT_GRAY_DELETE          = 0xA300;
+const RAW_CODE ALT_GRAY_HOME            = 0x9700;
+const RAW_CODE ALT_GRAY_END             = 0x9F00;
+const RAW_CODE ALT_GRAY_PGUP            = 0x9900;
+const RAW_CODE ALT_GRAY_PGDN            = 0xA100;
+const RAW_CODE ALT_GRAY_DIVIDE          = 0xA400;
+const RAW_CODE ALT_GRAY_MULTIPLY        = 0x3700;
+const RAW_CODE ALT_GRAY_PLUS            = 0x4E00;
+const RAW_CODE ALT_GRAY_MINUS           = 0x4A00;
+
+const RAW_CODE WHITE_UP_ARROW           = 0x4800;   // White keys
+const RAW_CODE WHITE_DOWN_ARROW         = 0x5000;
+const RAW_CODE WHITE_LEFT_ARROW         = 0x4B00;
+const RAW_CODE WHITE_RIGHT_ARROW        = 0x4D00;
+const RAW_CODE WHITE_INSERT             = 0x5200;
+const RAW_CODE WHITE_DELETE             = 0x5300;
+const RAW_CODE WHITE_HOME               = 0x4700;
+const RAW_CODE WHITE_END                = 0x4F00;
+const RAW_CODE WHITE_PGUP               = 0x4900;
+const RAW_CODE WHITE_PGDN               = 0x5100;
+const RAW_CODE WHITE_CENTER             = 0x4C00;
+
+const RAW_CODE CTRL_WHITE_UP_ARROW      = 0x8D00;
+const RAW_CODE CTRL_WHITE_DOWN_ARROW    = 0x9100;
+const RAW_CODE CTRL_WHITE_LEFT_ARROW    = 0x7300;
+const RAW_CODE CTRL_WHITE_RIGHT_ARROW   = 0x7400;
+const RAW_CODE CTRL_WHITE_INSERT        = 0x9200;
+const RAW_CODE CTRL_WHITE_DELETE        = 0x9300;
+const RAW_CODE CTRL_WHITE_HOME          = 0x7700;
+const RAW_CODE CTRL_WHITE_END           = 0x7500;
+const RAW_CODE CTRL_WHITE_PGUP          = 0x8400;
+const RAW_CODE CTRL_WHITE_PGDN          = 0x7600;
+const RAW_CODE CTRL_WHITE_CENTER        = 0x8F00;
+
+const RAW_CODE F1                       = 0x3B00;   // Function keys
+const RAW_CODE F2                       = 0x3C00;
+const RAW_CODE F3                       = 0x3D00;
+const RAW_CODE F4                       = 0x3E00;
+const RAW_CODE F5                       = 0x3F00;
+const RAW_CODE F6                       = 0x4000;
+const RAW_CODE F7                       = 0x4100;
+const RAW_CODE F8                       = 0x4200;
+const RAW_CODE F9                       = 0x4300;
+const RAW_CODE F10                      = 0x4400;
+const RAW_CODE F11                      = 0x8500;
+const RAW_CODE F12                      = 0x8600;
+
+const RAW_CODE SHIFT_F1                 = 0x5400;
+const RAW_CODE SHIFT_F2                 = 0x5500;
+const RAW_CODE SHIFT_F3                 = 0x5600;
+const RAW_CODE SHIFT_F4                 = 0x5700;
+const RAW_CODE SHIFT_F5                 = 0x5800;
+const RAW_CODE SHIFT_F6                 = 0x5900;
+const RAW_CODE SHIFT_F7                 = 0x5A00;
+const RAW_CODE SHIFT_F8                 = 0x5B00;
+const RAW_CODE SHIFT_F9                 = 0x5C00;
+const RAW_CODE SHIFT_F10                = 0x5D00;
+const RAW_CODE SHIFT_F11                = 0x8700;
+const RAW_CODE SHIFT_F12                = 0x8800;
+
+const RAW_CODE CTRL_F1                  = 0x5E00;
+const RAW_CODE CTRL_F2                  = 0x5F00;
+const RAW_CODE CTRL_F3                  = 0x6000;
+const RAW_CODE CTRL_F4                  = 0x6100;
+const RAW_CODE CTRL_F5                  = 0x6200;
+const RAW_CODE CTRL_F6                  = 0x6300;
+const RAW_CODE CTRL_F7                  = 0x6400;
+const RAW_CODE CTRL_F8                  = 0x6500;
+const RAW_CODE CTRL_F9                  = 0x6600;
+const RAW_CODE CTRL_F10                 = 0x6700;
+const RAW_CODE CTRL_F11                 = 0x8900;
+const RAW_CODE CTRL_F12                 = 0x8A00;
+
+const RAW_CODE ALT_F1                   = 0x6800;
+const RAW_CODE ALT_F2                   = 0x6900;
+const RAW_CODE ALT_F3                   = 0x6A00;
+const RAW_CODE ALT_F4                   = 0x6B00;
+const RAW_CODE ALT_F5                   = 0x6C00;
+const RAW_CODE ALT_F6                   = 0x6D00;
+const RAW_CODE ALT_F7                   = 0x6E00;
+const RAW_CODE ALT_F8                   = 0x6F00;
+const RAW_CODE ALT_F9                   = 0x7000;
+const RAW_CODE ALT_F10                  = 0x7100;
+const RAW_CODE ALT_F11                  = 0x8B00;
+const RAW_CODE ALT_F12                  = 0x8C00;
+
+// ----- Special hotkey values ----------------------------------------------
+const UCHAR HOT_KEY_MAXIMIZE        = 252;
+const UCHAR HOT_KEY_MINIMIZE        = 253;
+const UCHAR HOT_KEY_SYSTEM      = 254;
+const UCHAR HOT_KEY_SUB_WINDOW      = 255;
+
+// ----- Key Information ----------------------------------------------------
+// --- event.type is E_KEY
+// --- event.rawCode is the key shift state (high byte) and scan code (low byte)
+// --- event.key contains the key shift-state and scan-code
+
+// --- shiftState ---
+const RAW_CODE S_SHIFT                  = 0x0003;   // left- or right-shift
+const RAW_CODE S_RIGHT_SHIFT            = 0x0001;
+const RAW_CODE S_LEFT_SHIFT             = 0x0002;
+const RAW_CODE S_CTRL                   = 0x0004;
+const RAW_CODE S_ALT                    = 0x0008;
+const RAW_CODE S_SCROLL_LOCK            = 0x0010;
+const RAW_CODE S_NUM_LOCK               = 0x0020;
+const RAW_CODE S_CAPS_LOCK              = 0x0040;
+const RAW_CODE S_INSERT                 = 0x0080;
+
+struct EXPORT UI_KEY
+{
+    RAW_CODE shiftState;
+    RAW_CODE value;
+};
+
+// ----- Mouse Information --------------------------------------------------
+// --- event.type is E_MOUSE
+// --- event.rawCode is the mouse shift state (high byte) and button status (low byte)
+// --- event.position.line and event.position.column contains the mouse position
+
+const RAW_CODE M_LEFT                   = 0x0100;
+const RAW_CODE M_RIGHT                  = 0x0200;
+const RAW_CODE M_MIDDLE                 = 0x0400;
+const RAW_CODE M_TOP_CHANGE             = 0x0800;   // only used in sizing operation
+const RAW_CODE M_LEFT_CHANGE            = 0x1000;
+const RAW_CODE M_RIGHT_CHANGE           = 0x2000;
+const RAW_CODE M_MIDDLE_CHANGE          = 0x4000;
+const RAW_CODE M_BOTTOM_CHANGE          = 0x8000;   // only used in sizing operation
+
+
+
+*
+* QCONFIG.DAT:  Default config file for QEdit 2.x.
+*
+* Specify control-key commands via: ^f1 - This means Control-F1
+* Specify alt-key commands via: @f1     - This means Alt-F1
+* Specify shift-key commands via: #f1   - This means Shift-F1
+*
+* There is also a provision for "two key commands".
+* For example, to make the Control-F1, Control-F2 sequence issue the
+* exit command, try the following:
+*
+* ^f1_^f2     Exit
+*
+* The key here is that the commands must be separated by a '_'.
+*
+* Multiple commands and/or text may be entered for a single key.  To do so,
+* specify "MacroBegin" as the first command.  To enter text, enclose the
+* text in single or double quote marks.  For example:
+*
+* f1  MacroBegin EditFile 'help.dat' Return
+*
+* This command would load the file 'help.dat'.  Note the return command is
+* issued after the text.  This is required to terminate the QEdit prompt.
+*
+* Following is a macro that will run make and load the results into a window:
+*
+* MacroBegin EditFile 'errors.lst' Return Quit Dos 'make >errors.lst' Return Return HorizontalWindow  EditFile 'errors.lst' Return
+*
+* Following macro will run Turbo C on the current file:
+*
+* MacroBegin GSave Dos 'tcc -y -M ' CurrentFilename Return
+*
+* Finally, you can also use the scancode to represent "special keys", as
+* long as this key returns a ascii character code of 0.
+* For example Alt-F9 returns an ascii character of 0 and a scan code of
+* 112 decimal.  To make Alt-F9 issue the EditFile command, you could:
+*
+* 112  EditFile
+*     or
+* @f9  EditFile
+*
+* Either will work.  This becomes especially useful if you have a macro
+* processor and/or special keyboard that has extended keys that QEdit
+* doesn't have names for.  This gives you a method to use them.
+*
+* Note that the order of this file is NOT important.  Arrange it however
+* makes sense to you.
+*
+
+*
+* function key set
+*
+
+f1               QuickHelp
+f2               AddLine
+f3               RepeatFind
+f4               DupLine
+f5               MakeTopOfScreen
+f6               NextWindow
+f7               MarkBlockBegin
+f8               MarkBlockEnd
+f9               Shell
+f10
+
+* enhanced keyboard only
+f11
+f12
+
+#f1              ToggleBoxDraw
+#f2
+#f3              Sort
+#f4
+#f5              MakeCtrOfScreen
+#f6
+#f7              ShiftLEFT
+#f8              ShiftRight
+#f9
+#f10
+
+* enhanced keyboard only
+#f11
+#f12
+
+^f1              ToggleEGA43
+^f2
+^f3
+^f4
+^f5
+^f6
+^f7
+^f8
+^f9
+^f10
+
+* enhanced keyboard only
+^f11
+^f12
+
+@f1              ToggleBoxType
+@f2              InsertLine
+@f3              Match
+@f4
+@f5              ScreenLEFT
+@f6              ScreenRight
+@f7
+@f8
+@f9              Dos
+@f10             ShowEntryScreen
+
+* enhanced keyboard only
+@f11
+@f12
+
+*
+* special keys
+*
+
+cursorup         CursorUp
+cursordown       CursorDown
+cursorleft       CursorLEFT
+cursorright      CursorRight
+^cursorleft      WordLEFT
+^cursorright     WordRight
+home             BegLine
+end              EndLine
+^home            BegScreen
+^end             EndScreen
+pgup             PageUp
+pgdn             PageDown
+^pgdn            EndFile
+^pgup            BegFile
+
+#tab             TabLt
+tab              TabRt
+
+ins              ToggleInsert
+del              DelCh
+
+backspace        Backspace
+^backspace       DelLtWord
+
+enter            Return
+^enter           ExecuteScrap
+
+escape           Escape
+
+grey*            Paste
+grey+            Copy
+grey-            Cut
+#del
+#ins             MacroBegin  MainMenu 'b' 'c'
+`
+~
+/
+
+^prtsc           PasteOver
+^2
+^6
+^[
+^\
+*
+* Macro to edit the file whose name is sitting at the cursor in the editor
+*
+^]                 MacroBegin AltWordSet MarkWord Copy DefaultWordSet EditFile Paste Return
+^-                 GetPrev
+
+*
+* alternate keys
+*
+
+@a               DropAnchor
+@b               WrapPara
+@c               CopyBlock
+@d               DelLine
+@e               EditFile
+@f               MacroBegin MainMenu 'f'
+@g               DeleteBlock
+@h               QuickHelp
+@i               ToggleTabsOut
+@j               JoinLine
+@k               MarkColumn
+@l               MarkLine
+@m               MoveBlock
+@n               NextFile
+@o               ChangeFilename
+@p               MacroBegin MainMenu 'p'
+@q               MacroBegin MainMenu 'q'
+@r               ReadBlock
+@s               Find
+@t
+@u               UnmarkBlock
+@v               ToggleTabsExpand
+@w               WriteBlock
+@x               GExit
+@y               GSave
+@z               CopyOverBlock
+@1               Upper
+@2               Lower
+@3               Flip
+@4
+@5
+@6
+@7
+@8
+@9
+@0
+@-
+@=               MacroBegin MarkWord Copy Find Paste Return Return
+
+*
+* control keys
+*
+
+
+^a               WordLEFT
+^b_a             AppendScrBuff
+^b_l             GetScrBuff
+^b_s             StoreScrBuff
+^c               PageDown
+^d               CursorRight
+^e               CursorUp
+^f               WordRight
+^g               DelCh
+^h               Backspace
+^i               TabRt
+^j               GotoLine
+^k_b             MarkBlockBegin
+^k_c             CopyBlock
+^k_d             Exit
+^k_e             EditFile
+^k_f             ChangeFilename
+^k_h             UnmarkBlock
+^k_k             MarkBlockEnd
+^k_l             FillBlock
+^k_n             NextFile
+^k_p             PrevFile
+^k_q             PQuit
+^k_r             ReadBlock
+^k_s             SaveFile
+^k_t             MarkWord
+^k_v             MoveBlock
+^k_w             WriteBlock
+^k_x             File
+^k_y             DeleteBlock
+^k_z             KillFile
+^l               RepeatFind
+^m               MacroRecord
+^n               SplitLine
+^o_c             CloseWindow
+^o_g             GrowWindow
+^o_h             HorizontalWindow
+^o_l             SetPrintLEFTMargin
+^o_n             NextWindow
+^o_o             OneWindow
+^o_p             PrevWindow
+^o_r             SetRMargin
+^o_s             ShrinkWindow
+^o_t             CenterLine
+^o_w             ToggleWordWrap
+^o_z             ZoomWindow
+^p               Literal
+^q_a             FindReplace
+^q_b             GotoBlockBeg
+^q_c             EndFile
+^q_d             EndLine
+^q_e             BegScreen
+^q_f             Find
+^q_i             ToggleIndent
+^q_k             GotoBlockEnd
+^q_l             UndoCursorline
+^q_p             PrevPosition
+^q_q             RepeatCmd
+^q_r             BegFile
+^q_s             BegLine
+^q_t             ToggleSmartTabs
+^q_x             EndScreen
+^q_y             DelToEol
+^r               PageUp
+^s               CursorLEFT
+^t               DelRtWord
+^u               UnKill
+^v               ToggleInsert
+^w               ScrollUp
+^x               CursorDown
+^y               DelLine
+^z               ScrollDown
+
+*
+* other enhanced only keys
+*
+@'
+@,
+@.
+@/
+@;
+@[
+@\
+@]
+@`
+@backspace
+@enter
+@escape
+@grey*
+@grey+
+@grey-
+@grey/
+@greycursordown
+@greycursorleft
+@greycursorright
+@greycursorup
+@greydel
+@greyend
+@greyhome
+@greyins
+@greypgdn
+@greypgup
+@greyenter
+@tab
+
+greyenter        Return
+^greyenter       ExecuteScrap
+^centercursor
+^cursordown      LineDown
+^cursorup        LineUp
+^del
+
+^grey*
+^grey+
+^grey-
+^grey/
+^ins
+^tab
+
+centercursor

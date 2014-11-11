@@ -1,0 +1,47 @@
+ file twcore.cpp line 247    Stack  65336   free bytes   HEAP OK 
+ file twcore.cpp line 267    Stack  65336   free bytes   HEAP OK 
+ file twcore.cpp line 247    Stack  65336   free bytes   HEAP OK 
+ file twcore.cpp line 267    Stack  65336   free bytes   HEAP OK 
+ file twcore.cpp line 247    Stack  65336   free bytes   HEAP OK 
+ file twcore.cpp line 267    Stack  65336   free bytes   HEAP OK 
+ main after except setup     Stack  65304   free bytes   HEAP OK 
+ file edit.cpp line 163    Stack  65256   free bytes   HEAP OK 
+ file edit.cpp line 183    Stack  65256   free bytes   HEAP OK 
+ file edit.cpp line 330    Stack  65280   free bytes   HEAP OK 
+ file viewer.cpp line 112    Stack  64844   free bytes   HEAP OK 
+ file viewer.cpp line 170    Stack  64844   free bytes   HEAP OK 
+ file twcore.cpp line 247    Stack  64776   free bytes   HEAP OK 
+ file twcore.cpp line 267    Stack  64776   free bytes   HEAP OK 
+ wcore clear file twcore.cpp line 297    Stack  64772   free bytes   HEAP OK 
+ file twcore.cpp line 247    Stack  64776   free bytes   HEAP OK 
+ file twcore.cpp line 267    Stack  64776   free bytes   HEAP OK 
+ file viewer.cpp line 185    Stack  64844   free bytes   HEAP OK 
+ wcore clear file twcore.cpp line 297    Stack  64756   free bytes   HEAP OK 
+ file viewer.cpp line 198    Stack  64844   free bytes   HEAP OK 
+ file xfile.cpp line 326    Stack  63692   free bytes   HEAP OK 
+ file edit.cpp line 332    Stack  65280   free bytes   HEAP OK 
+ file twcore.cpp line 247    Stack  65020   free bytes   HEAP OK 
+ file twcore.cpp line 267    Stack  65020   free bytes   HEAP OK 
+ wcore clear file twcore.cpp line 297    Stack  65016   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 275    Stack  65060   free bytes   HEAP OK 
+ wcore hide file twcore.cpp line 317    Stack  65032   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 281    Stack  65060   free bytes   HEAP OK 
+ main after except setup     Stack  65304   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 275    Stack  65300   free bytes   HEAP OK 
+ wcore hide file twcore.cpp line 317    Stack  65272   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 281    Stack  65300   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 275    Stack  65300   free bytes   HEAP OK 
+ wcore hide file twcore.cpp line 317    Stack  65272   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 281    Stack  65300   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 275    Stack  65300   free bytes   HEAP OK 
+ wcore hide file twcore.cpp line 317    Stack  65272   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 281    Stack  65300   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 275    Stack  65300   free bytes   HEAP OK 
+ wcore hide file twcore.cpp line 317    Stack  65272   free bytes   HEAP OK 
+ wcore delete file twcore.cpp line 281    Stack  65300   free bytes   HEAP OK 
+ file twsetup.cpp line 119    Stack  65300   free bytes   HEAP OK 
+ file twsetup.cpp line 123    Stack  65300   free bytes   HEAP OK 
+ file twsetup.cpp line 126    Stack  65300   free bytes   HEAP OK 
+ file twsetup.cpp line 128    Stack  65300   free bytes   HEAP OK 
+ file twsetup.cpp line 134    Stack  65300   free bytes   HEAP OK 
+ file twsetup.cpp line 139    Stack  65300   free bytes   HEAP OK 
